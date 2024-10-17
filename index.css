@@ -33,16 +33,25 @@
   --spacing-width-tiny: 15rem;
   --spacing-width-xl: 50rem;
 
-  /* Color */
-  --color-powder-ash: #B5C9BD;
-  --color-sea-nymph: #74A69A;
-  --color-onyx: #2C302F;
+  /* light */
+  --background-light: #B5C9BD;
+  --line-light: #2C302F;
+  --heading-light: #74A69A;
+  --body-light: #2C302F;
 
+  /* dark */
+  --background-dark: #2C302F;
+  --line-dark: #74A69A;
+  --heading-dark: #74A69A;
+  --body-dark: #B5C9BD;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-powder-ash: var(--color-onyx);
+    --background-light: var(--background-dark);
+    --line-light: var(--line-dark);
+    --heading-light: var(--heading-dark);
+    --body-light: var(--body-dark);
     
   }
   /* Add a bit of transparancy so light media isn't so glaring in dark mode */
@@ -95,19 +104,21 @@
   color: var(--light-highlight-text);
 }
 
-html {
-    border-top: 0.5em solid var(--light-link-b);
-    max-width: 100%;
-}
-
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-html[data-theme='light'] {}
+html {
+  border-top: 0.5em solid var(--line-light);
+  max-width: 100%;
+}
+
+html[data-theme='light'] {
+}
 
 html[data-theme='dark'] {
-  background: var(--color-onyx);
+  border-top: 0.5em solid var(--line-light);
+  background: var(--background-dark);
 }
 
 address,
@@ -162,7 +173,7 @@ body {
   overflow-x: hidden;
   word-break: break-word;
   overflow-wrap: break-word;
-  background: var(--color-powder-ash);
+  background: var(--background-light);
 
   /* Main body text */
   color: var(--light-text-b);

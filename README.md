@@ -40,3 +40,4 @@
 - https://www.patreon.com/
 - https://www.smashingmagazine.com/
 - https://webring.xxiivv.com/?ref=gr0k.net#random
+- https://remixicon.com/

@@ -1,6 +1,6 @@
 /*
- * Syenasweta.css
- * A CSS Library for Idless and Classless HTML
+ * Syenasweta.com
+ * The online home
  * Author: Nashrullah Ali Fauzi
  * Version: 1.0.0
  * License:  MIT License
@@ -34,12 +34,18 @@
   --spacing-width-xl: 50rem;
 
   /* light */
+  --svg-background-light: #2C302F;
+  --svg-logo-color-light: #B5C9BD;
+  --svg-logotype-color-light: #2C302F;
   --background-light: #B5C9BD;
   --line-light: #2C302F;
-  --heading-light: #74A69A;
+  --heading-light: #2C302F;
   --body-light: #2C302F;
 
   /* dark */
+  --svg-background-dark: #B5C9BD;
+  --svg-logo-color-dark: #2C302F;
+  --svg-logotype-color-dark: #74A69A;
   --background-dark: #2C302F;
   --line-dark: #74A69A;
   --heading-dark: #74A69A;
@@ -48,6 +54,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --svg-background-light: var(--svg-background-dark);
+    --svg-logo-color-light: var(--svg-logo-color-dark);
+    --svg-logotype-color-light: var(--svg-logotype-color-dark);
     --background-light: var(--background-dark);
     --line-light: var(--line-dark);
     --heading-light: var(--heading-dark);
@@ -121,6 +130,7 @@ html[data-theme='dark'] {
   background: var(--background-dark);
 }
 
+
 address,
 area,
 article,
@@ -176,7 +186,7 @@ body {
   background: var(--background-light);
 
   /* Main body text */
-  color: var(--light-text-b);
+  color: var(--body-ligh);
   font-size: 1.03rem;
   line-height: 1.5;
 
@@ -202,6 +212,27 @@ body > header > hgroup > h2 {
   font-size: 1rem;
 }
 
+svg[class="logo-logotype"] {
+  flex: none;
+  transition: color 0.1s linear;
+  color: inherit;
+  max-width: 100%;
+  width: 37%;
+  height: auto;
+}
+
+svg path.square {
+  fill:var(--svg-background-light);
+}
+
+svg path.logo {
+  fill:var(--svg-logo-color-light);
+}
+
+svg path.logotype {
+  fill:var(--svg-logotype-color-light);
+}
+
 main {
   padding-top: 1.5rem;
 }
@@ -213,14 +244,14 @@ h4,
 h5,
 h6 {
   line-height: 1;
-  color: var(--light-text-a);
+  color: var(--heading-light);
   padding-top: .875rem;
 }
 
 h1,
 h2,
 h3 {
-  color: var(--light-text-a);
+  color: var(--heading-light);
   padding-bottom: 2px;
   margin-bottom: 8px;
 }
@@ -256,15 +287,15 @@ h6 {
 }
 
 a {
-  color: var(--light-link-a);
+  color: var(--heading-light);
 }
 
 a:visited {
-  color: var(--light-link-a);
+  color: var(--body-light);
 }
 
 a:hover {
-  color: var(--light-link-b);
+  color: var(--body-light);
 }
 
 abbr:hover {
@@ -670,15 +701,14 @@ input {
   box-sizing: border-box;
 }
 
-img, canvas, iframe, video, svg, select, textarea {
+img, canvas, iframe, video, select, textarea {
   max-width: 100%;
   width: 100%;
   height: auto;
 }
 
 img,
-video,
-svg {
+video {
   max-width: 100%;
   height: auto;
 }
@@ -711,4 +741,3 @@ figure figcaption {
 /* Block Element */
 
 /* Inline Element */
-

@@ -21,7 +21,7 @@
   --font-size-serif: 18px;
 
 
-  --content-width: 70ch;
+  --content-width: 90ch;
   --spacing: 1.5em;
   --spacing-s: calc(0.5 * var(--spacing));
   --spacing-m: var(--spacing);

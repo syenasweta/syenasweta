@@ -9,16 +9,18 @@
 
 @charset "UTF-8";
 
-/* @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   color-scheme: light dark;
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-serif: 'Merriweather', Times, serif;
-  --font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+  --font-sans: "Lora", sans-serif;
+  --font-serif: "Alice", serif;
+  --font-mono: "JetBrains Mono", monospace;
   --font-size: 16px;
   --font-s: 14px;
   --font-size-serif: 18px;
+
+
   --content-width: 70ch;
   --spacing: 1.5em;
   --spacing-s: calc(0.5 * var(--spacing));
@@ -31,43 +33,17 @@
   --spacing-width-tiny: 15rem;
   --spacing-width-xl: 50rem;
 
-  /* Syenasweta Light */
-  --light-text-a: #3D3D49;
-  --light-text-b: #3D3D49;
-  --light-background-a: #DDD8D5;
-  --light-background-b: #F6F8FA;
-  --light-background-c: #D5B7AF;
-  --light-link-a: #3D3D49;
-  --light-link-b: #3D3D49;
-  --light-link-text: #FFFFFF;
-  --light-highlight-a: #79FFE1;
-  --light-highlight-text: #0C4047;
+  /* Color */
+  --color-powder-ash: #B5C9BD;
+  --color-sea-nymph: #74A69A;
+  --color-onyx: #2C302F;
 
-  /* Syenasweta Dark */
-  --dark-text-a: #ffffff;
-  --dark-text-b: #eeeeee;
-  --dark-background-a: #000000;
-  --dark-background-b: #111111;
-  --dark-background-c: #222222;
-  --dark-link-a: #3291FF;
-  --dark-link-b: #0070F3;
-  --dark-link-text: #FFFFFF;
-  --dark-highlight-a: #7928CA;
-  --dark-highlight-text: #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --light-text-a: var(--dark-text-a);
-    --light-text-b: var(--dark-text-b);
-    --light-background-a: var(--dark-background-a);
-    --light-background-b: var(--dark-background-b);
-    --light-background-c: var(--dark-background-c);
-    --light-link-a: var(--dark-link-a);
-    --light-link-b: var(--dark-link-b);
-    --light-link-text: var(--dark-link-text);
-    --light-highlight-a: var(--dark-highlight-a);
-    --light-highlight-text: var(--dark-highlight-text);
+    --color-powder-ash: var(--color-onyx);
+    
   }
   /* Add a bit of transparancy so light media isn't so glaring in dark mode */
   img,
@@ -131,7 +107,7 @@ html:focus-within {
 html[data-theme='light'] {}
 
 html[data-theme='dark'] {
-  background: var(--dark-background-a);
+  background: var(--color-onyx);
 }
 
 address,
@@ -186,7 +162,7 @@ body {
   overflow-x: hidden;
   word-break: break-word;
   overflow-wrap: break-word;
-  background: var(--light-background-a);
+  background: var(--color-powder-ash);
 
   /* Main body text */
   color: var(--light-text-b);
@@ -205,7 +181,10 @@ body>* {
 }
 
 body > header > hgroup > h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
   font-size: 2rem;
+  font-style: normal;
 }
 
 body > header > hgroup > h2 {
@@ -454,7 +433,7 @@ code pre {
 details {
   /* Make the <details> look more "clickable" */
   padding: .6rem 1rem;
-  background: var(--light-background-b);
+  background: var(--color-powder-ash);
   border: 1px solid var(--light-background-c);
   border-radius: 4px;
 }

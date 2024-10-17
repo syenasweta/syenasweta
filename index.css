@@ -1,0 +1,724 @@
+/*
+ * Syenasweta.css
+ * A CSS Library for Idless and Classless HTML
+ * Author: Nashrullah Ali Fauzi
+ * Version: 1.0.0
+ * License:  MIT License
+ * Project: https://github.com/syenasweta
+ */
+
+@charset "UTF-8";
+
+/* @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"); */
+
+:root {
+  color-scheme: light dark;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-serif: 'Merriweather', Times, serif;
+  --font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+  --font-size: 16px;
+  --font-s: 14px;
+  --font-size-serif: 18px;
+  --content-width: 70ch;
+  --spacing: 1.5em;
+  --spacing-s: calc(0.5 * var(--spacing));
+  --spacing-m: var(--spacing);
+  --spacing-l: calc(1.5 * var(--spacing));
+  --spacing-xl: calc(2.5 * var(--spacing));
+  --spacing-xxl: calc(5 * var(--spacing));
+  --spacing-col: calc(6 * var(--spacing));
+  --spacing-width-max: 38rem;
+  --spacing-width-tiny: 15rem;
+  --spacing-width-xl: 50rem;
+
+  /* Syenasweta Light */
+  --light-text-a: #3D3D49;
+  --light-text-b: #3D3D49;
+  --light-background-a: #DDD8D5;
+  --light-background-b: #F6F8FA;
+  --light-background-c: #D5B7AF;
+  --light-link-a: #3D3D49;
+  --light-link-b: #3D3D49;
+  --light-link-text: #FFFFFF;
+  --light-highlight-a: #79FFE1;
+  --light-highlight-text: #0C4047;
+
+  /* Syenasweta Dark */
+  --dark-text-a: #ffffff;
+  --dark-text-b: #eeeeee;
+  --dark-background-a: #000000;
+  --dark-background-b: #111111;
+  --dark-background-c: #222222;
+  --dark-link-a: #3291FF;
+  --dark-link-b: #0070F3;
+  --dark-link-text: #FFFFFF;
+  --dark-highlight-a: #7928CA;
+  --dark-highlight-text: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light-text-a: var(--dark-text-a);
+    --light-text-b: var(--dark-text-b);
+    --light-background-a: var(--dark-background-a);
+    --light-background-b: var(--dark-background-b);
+    --light-background-c: var(--dark-background-c);
+    --light-link-a: var(--dark-link-a);
+    --light-link-b: var(--dark-link-b);
+    --light-link-text: var(--dark-link-text);
+    --light-highlight-a: var(--dark-highlight-a);
+    --light-highlight-text: var(--dark-highlight-text);
+  }
+  /* Add a bit of transparancy so light media isn't so glaring in dark mode */
+  img,
+  video {
+    opacity: 0.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0 !important;
+    transition-duration: 0 !important;
+  }
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+[disabled] {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+::selection {
+  background: var(--light-highlight-a);
+  color: var(--light-highlight-text);
+}
+
+html {
+    border-top: 0.5em solid var(--light-link-b);
+    max-width: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html[data-theme='light'] {}
+
+html[data-theme='dark'] {
+  background: var(--dark-background-a);
+}
+
+address,
+area,
+article,
+aside,
+audio,
+blockquote,
+datalist,
+details,
+dl,
+fieldset,
+figure,
+form,
+input,
+iframe,
+img,
+meter,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+pre,
+progress,
+ruby,
+section,
+table,
+textarea,
+ul,
+video {
+  margin-bottom: 1rem;
+}
+
+html,
+input,
+select,
+button {
+  font-family: var(--font-sans);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  /* Center body in page */
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 0 1rem;
+  border-radius: 6px;
+  overflow-x: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  background: var(--light-background-a);
+
+  /* Main body text */
+  color: var(--light-text-b);
+  font-size: 1.03rem;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  tab-size: 4;
+  word-break: break-word;
+  -webkit-tap-highlight-color: transparent; /* Remove the grey highlight on links in iOS */
+  -webkit-text-size-adjust: 100%;  /* Prevent adjustments of font size after orientation changes in iOS. */
+}
+
+body>* {
+  grid-column: 2;
+}
+
+body > header > hgroup > h1 {
+  font-size: 2rem;
+}
+
+body > header > hgroup > h2 {
+  font-size: 1rem;
+}
+
+main {
+  padding-top: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  color: var(--light-text-a);
+  padding-top: .875rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--light-text-a);
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+}
+
+h4,
+h5,
+h6 {
+  margin-bottom: .3rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.85rem;
+}
+
+h3 {
+  font-size: 1.55rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: .875rem;
+}
+
+a {
+  color: var(--light-link-a);
+}
+
+a:visited {
+  color: var(--light-link-a);
+}
+
+a:hover {
+  color: var(--light-link-b);
+}
+
+abbr:hover {
+  cursor: help;
+}
+
+blockquote {
+  padding: 1.5rem;
+  border-left: 5px solid var(--light-background-c);
+}
+
+abbr {
+  cursor: help;
+}
+
+blockquote *:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+header {
+  padding: 2rem 1.5rem;
+
+  /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
+
+  margin: -2rem calc(50% - 50vw) 2rem;
+
+  /* Shorthand for:
+
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw); */
+
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+}
+
+header h1,
+header h2,
+header h3 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+header nav {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+header>*:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+header>*:last-child {
+  margin-bottom: 0;
+}
+
+a button,
+button,
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  font-size: 1rem;
+  display: inline-block;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background: var(--light-link-a);
+  color: var(--light-link-text);
+  border: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: var(--light-link-text);
+}
+
+a button[disabled],
+button[disabled],
+[role="button"][aria-disabled="true"],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][disabled],
+select[disabled] {
+  cursor: default;
+  opacity: .5;
+
+  /* Set the [X] cursor while hovering a disabled link */
+  cursor: not-allowed;
+}
+
+button:focus,
+button:enabled:hover,
+[role="button"]:focus,
+[role="button"]:not([aria-disabled="true"]):hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover {
+  background: var(--light-link-b);
+  filter: brightness(1.4);
+  cursor: pointer;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+  background-color: var(--disabled);
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
+a img {
+  margin-bottom: 0px;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-mono);
+}
+
+code,
+samp,
+kbd,
+pre {
+  /* The main preformatted style. This is changed slightly across different cases. */
+  border: 1px solid var(--light-background-c);
+  padding: 3px 6px;
+  /* ↓ font-size is relative to containing element, so it scales for titles*/
+  font-size: 0.9em;
+}
+
+kbd {
+  border-bottom: 3px solid var(--light-background-c);
+}
+
+pre {
+  padding: 1rem 1.4rem;
+  max-width: 100%;
+  overflow: auto;
+}
+
+pre code {
+  /* When <code> is in a <pre>, reset it's formatting to blend in */
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+code pre {
+  /* When <pre> is in a <code>, reset it's formatting to blend in */
+  display: inline;
+  background: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+details {
+  /* Make the <details> look more "clickable" */
+  padding: .6rem 1rem;
+  background: var(--light-background-b);
+  border: 1px solid var(--light-background-c);
+  border-radius: 4px;
+}
+
+summary {
+  /* Makes the <summary> look more like a "clickable" link with the pointer cursor */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details[open] {
+  /* Adjust the <details> padding while open */
+  padding-bottom: .75rem;
+}
+
+details[open] summary {
+  /* Adjust the <details> padding while open */
+  margin-bottom: 6px;
+}
+
+details[open]>*:last-child {
+  /* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd::before {
+  /* Add an arrow to data table definitions */
+  content: '→ ';
+}
+
+hr {
+  /* Reset the border of the <hr> separator, then set a better line */
+  border: 0;
+  border-bottom: 1px solid var(--light-background-c);
+  margin: 1rem auto;
+
+  height: 0; /* Add the correct box sizing in Firefox. */
+  overflow: visible; /* Show the overflow in Edge and IE. */
+}
+
+fieldset {
+  margin-top: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--light-background-c);
+  border-radius: 4px;
+}
+
+legend {
+  padding: auto .5rem;
+}
+
+table {
+  /* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+  border-collapse: collapse;
+  width: 100%
+}
+
+td,
+th {
+  border: 1px solid var(--light-background-c);
+  text-align: left;
+  padding: .5rem;
+}
+
+th {
+  background: var(--light-background-b);
+}
+
+/*tr:nth-child(even) {
+  Set every other cell slightly darker. Improves readability.
+  background: var(--light-background-b);
+}*/
+
+table caption {
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+textarea {
+  /* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
+  max-width: 100%;
+}
+
+/* Format forms */
+textarea,
+select,
+input {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 60%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Add arrow to drop-down */
+select {
+  background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
+    linear-gradient(135deg, var(--text) 51%, transparent 49%);
+  background-position: calc(100% - 20px), calc(100% - 15px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+select[multiple] {
+  background-image: none !important;
+}
+
+/* checkbox and radio button style */
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: bottom;
+  position: relative;
+}
+
+input[type="radio"] {
+  border-radius: 100%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background: var(--accent);
+}
+
+input[type="checkbox"]:checked::after {
+  /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
+  content: " ";
+  width: 0.1em;
+  height: 0.25em;
+  border-radius: 0;
+  position: absolute;
+  top: 0.05em;
+  left: 0.18em;
+  background: transparent;
+  border-right: solid var(--bg) 0.08em;
+  border-bottom: solid var(--bg) 0.08em;
+  font-size: 1.8em;
+  transform: rotate(45deg);
+}
+input[type="radio"]:checked::after {
+  /* creates a colored circle for the checked radio button  */
+  content: " ";
+  width: 0.25em;
+  height: 0.25em;
+  border-radius: 100%;
+  position: absolute;
+  top: 0.125em;
+  background: var(--bg);
+  left: 0.125em;
+  font-size: 32px;
+}
+
+/* Make the textarea wider than other inputs */
+textarea {
+  width: 80%;
+}
+
+/* Makes input fields wider on smaller screens */
+@media only screen and (max-width: 720px) {
+  textarea,
+  select,
+  input {
+    width: 100%;
+  }
+}
+
+/* Ensures the checkbox and radio inputs do not have a set width like other input fields */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+}
+
+/* do not show border around file selector button */
+input[type="file"] {
+  border: 0;
+}
+
+ol,
+ul {
+  /* Replace the browser default padding */
+  padding-left: 2rem;
+}
+
+li {
+  margin-top: .4rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+
+mark {
+  padding: 3px 6px;
+  background: var(--light-highlight-a);
+  color: var(--light-highlight-text);
+}
+
+textarea,
+select,
+input {
+  padding: 6px 12px;
+  margin-bottom: .5rem;
+  background: var(--light-background-b);
+  color: var(--light-text-b);
+  border: 1px solid var(--light-background-c);
+  /*border-radius: 4px;*/
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+img, canvas, iframe, video, svg, select, textarea {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+iframe {
+  border-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+}
+
+figure,
+audio,
+video {
+  max-width: var(--spacing-width-xl);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure figcaption {
+
+}
+
+/* Block Element */
+
+/* Inline Element */
+

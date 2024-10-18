@@ -41,3 +41,4 @@
 - https://www.smashingmagazine.com/
 - https://webring.xxiivv.com/?ref=gr0k.net#random
 - https://remixicon.com/
+- https://jsfiddle.net/tovic/eU5PN/embedded/result,html,css

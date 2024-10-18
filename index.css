@@ -12,6 +12,7 @@
  @import url("https://fonts.googleapis.com/css2?family=Alice&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
  
  :root {
+  
    color-scheme: light dark;
    --font-sans: "Lora", sans-serif;
    --font-serif: "Alice", serif;
@@ -43,7 +44,7 @@
    --heading-light: #2C302F;
    --body-light: #2C302F;
    --selection-color-light: #2C302F;
-   --selection-background-light: #74A69A;
+   --selection-background-light: #B5C9BD;
  
    /* dark */
    --svg-background-dark: #B5C9BD;
@@ -54,7 +55,7 @@
    --heading-dark: #74A69A;
    --body-dark: #E9EAEB;
    --selection-color-dark: #2C302F;
-   --selection-background-dark: #74A69A;
+   --selection-background-dark: #B5C9BD;
  }
  
  @media (prefers-color-scheme: dark) {
@@ -832,3 +833,15 @@
    display: block;
    unicode-bidi: isolate;
  }
+
+ .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

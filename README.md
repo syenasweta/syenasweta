@@ -7,7 +7,9 @@
 
 ## Color
 
-- foundcolor
+- https://foundcolor.co/kikivunderink
+- https://foundcolor.co/laurentkronental
+- https://foundcolor.co/haarkon
 
 
 ## Navigasi
@@ -42,3 +44,4 @@
 - https://webring.xxiivv.com/?ref=gr0k.net#random
 - https://remixicon.com/
 - https://jsfiddle.net/tovic/eU5PN/embedded/result,html,css
+- https://jamesg.blog/

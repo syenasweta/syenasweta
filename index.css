@@ -57,6 +57,10 @@
    --selection-color-dark: #2C302F;
    --selection-background-dark: #B5C9BD;
  }
+
+ @view-transition {
+  navigation: auto;
+}
  
  @media (prefers-color-scheme: dark) {
    :root {
@@ -78,6 +82,7 @@
      opacity: 0.8;
    }
  }
+ 
  
  @media (prefers-reduced-motion: reduce) {
    html:focus-within {
@@ -834,7 +839,7 @@
    unicode-bidi: isolate;
  }
 
- .sr-only {
+ .sr-only, .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;

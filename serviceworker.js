@@ -20,6 +20,7 @@ function updateStaticCache() {
         // These items won't block the installation of the Service Worker
         staticCache.addAll([
             '/index.css',
+            '/syenasweta.svg',
         ]);
         // These items must be cached for the Service Worker to complete installation
         return staticCache.addAll([

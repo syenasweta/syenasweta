@@ -566,12 +566,9 @@
    margin: 0;
  }
  
+ 
  details {
-   /* Make the <details> look more "clickable" */
    padding: .6rem 1rem;
-   background: var(--color-powder-ash);
-   border: 1px solid var(--light-background-c);
-   border-radius: 4px;
  }
  
  summary {
@@ -909,4 +906,4 @@
    border-width: 0;
  }
  
- /* Inline Element */
+ 

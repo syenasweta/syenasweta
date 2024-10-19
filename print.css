@@ -1,0 +1,22 @@
+body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+    margin: 0 5%;
+}
+[role="navigation"],
+[role="presentation"],
+[role="complementary"],
+[role="contentinfo"] {
+    display: none;
+}
+[role="main"] {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+a, a * {
+    color:#930;
+    text-decoration: none;
+    font-weight: bold;
+}

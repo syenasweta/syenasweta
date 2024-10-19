@@ -34,6 +34,10 @@
    --spacing-width-max: 38rem;
    --spacing-width-tiny: 15rem;
    --spacing-width-xl: 50rem;
+
+   --logo-width-max: 38rem;
+   --logo-width-tiny: 15rem;
+   --logo-width-xl: 50rem;
  
    /* light */
    --svg-background-light: #2C302F;
@@ -52,7 +56,7 @@
    --svg-logotype-color-dark: #74A69A;
    --background-dark: #2C302F;
    --line-dark: #E9EAEB;
-   --heading-dark: #74A69A;
+   --heading-dark: #E9EAEB;
    --body-dark: #E9EAEB;
    --selection-color-dark: #2C302F;
    --selection-background-dark: #B5C9BD;
@@ -133,7 +137,7 @@
  }
  
  html {
-   border-top: 0.5em solid;
+   border-top: 0.3em solid;
    border-color:var(--line-light);
    max-width: 100%;
  }
@@ -234,7 +238,7 @@
    transition: color 0.1s linear;
    color: inherit;
    max-width: 100%;
-   width: 37%;
+   width: var(--logo-width-tiny);
    height: auto;
  }
  

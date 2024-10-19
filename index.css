@@ -396,36 +396,53 @@
    margin-bottom: 0;
  }
  
- header nav {
+ header nav,
+ footer nav {
    font-family: var(--font-overpass);
    background-color: var(--background-light);
    color: var(--link-light);
    font-weight: bold;
    padding: 0.5em;
  }
- header nav a {
+ header nav a,
+ footer nav a {
    font-weight: bold;
    text-decoration: none;
  }
  header nav a:link,
- header nav a:visited {
+ header nav a:visited,
+ footer nav a:link,
+ footer nav a:visited,
+ {
    color: var(--link-visited-light);
  }
  header nav a:hover,
  header nav a:focus,
- header nav a:active {
+ header nav a:active,
+ footer nav a:hover,
+ footer nav a:focus,
+ footer nav a:active {
    color: var(--link-hover-light);
  }
- header nav a.here {
+ header nav a.here,
+ footer nav a.here {
    color: var(--link-hover-light);
  }
- header nav ul {
+ header nav ul,
+ footer nav ul {
    margin: 0;
    padding: 0;
    width: 100%;
    overflow: hidden;
+
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: left;
+   gap: 0.3rem;
+
  }
- header nav ul li {
+ header nav ul li,
+ footer nav ul li {
    list-style: none;
    float: left;
    padding: 0 1.2em 0 0;

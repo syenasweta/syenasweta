@@ -40,12 +40,14 @@
    --svg-logo-color-light: #B5C9BD;
    --svg-logotype-color-light: #74A69A;
    --background-light: #E9EAEB;
+   --pre-background-light: #2C302F;
    --line-light: #2C302F;
    --heading-light: #2C302F;
    --link-light: #74A69A;
    --link-visited-light: #B5C9BD;
    --link-hover-light: #B5C9BD;
    --body-light: #2C302F;
+   --pre-body-light: #E9EAEB;
    --selection-color-light: #2C302F;
    --selection-background-light: #B5C9BD;
    /* dark */
@@ -53,12 +55,14 @@
    --svg-logo-color-dark: #2C302F;
    --svg-logotype-color-dark: #74A69A;
    --background-dark: #2C302F;
+   --pre-background-light: #E9EAEB;
    --line-dark: #E9EAEB;
    --heading-dark: #E9EAEB;
    --link-dark: #74A69A;
    --link-visited-dark: #B5C9BD;
    --link-hover-dark: #B5C9BD;
    --body-dark: #E9EAEB;
+   --pre-body-light: #2C302F;
    --selection-color-dark: #2C302F;
    --selection-background-dark: #B5C9BD;
  }
@@ -73,12 +77,14 @@
      --svg-logo-color-light: var(--svg-logo-color-dark);
      --svg-logotype-color-light: var(--svg-logotype-color-dark);
      --background-light: var(--background-dark);
+     --pre-background-light: var(--pre-background-dark);
      --line-light: var(--line-dark);
      --heading-light: var(--heading-dark);
      --link-light: var(--link-dark);
      --link-visited-light: var(--link-visited-dark);
      --link-hover-light: var(--link-hover-dark);
      --body-light: var(--body-dark);
+     --pre-body-light: var(--pre-body-dark);
      --selection-color-light: var(--selection-color-dark);
      --selection-background-light: var(--selection-background-dark);
  
@@ -479,6 +485,9 @@
  pre {
    max-width: 100%;
    overflow: auto;
+   border-radius: .25rem;
+   color: var(--pre-body-light);
+   background-color: var(--pre-background-light);
  }
  
  pre code {

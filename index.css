@@ -195,18 +195,10 @@
    margin-bottom: 1rem;
  }
  
- html,
- input,
- select,
- button {
-   font-family: var(--font-sans);
- }
- 
  body {
    -webkit-font-smoothing: antialiased;
    text-rendering: optimizeLegibility;
- 
-   /* Center body in page */
+   font-family: var(--font-sans);
    margin: 0 auto;
    max-width: var(--content-width);
    padding: 0 1rem;
@@ -215,19 +207,14 @@
    word-break: break-word;
    overflow-wrap: break-word;
    background: var(--background-light);
- 
-   /* Main body text */
    color: var(--body-light);
    font-size: 1.03rem;
    line-height: 1.5;
- 
    -moz-tab-size: 4;
    tab-size: 4;
    word-break: break-word;
    -webkit-tap-highlight-color: transparent;
-   /* Remove the grey highlight on links in iOS */
    -webkit-text-size-adjust: 100%;
-   /* Prevent adjustments of font size after orientation changes in iOS. */
  }
  
  body>* {
@@ -384,9 +371,6 @@
  
  header {
    padding: 2rem 1.5rem;
- 
-   /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
- 
    margin: -2rem calc(50% - 50vw) 2rem;
  
    /* Shorthand for:
@@ -462,7 +446,7 @@
   border-top: 1px solid var(--line-light);
   margin-bottom: 1rem;
 }
- 
+/* 
  a button,
  button,
  [role="button"],
@@ -495,8 +479,6 @@
  select[disabled] {
    cursor: default;
    opacity: .5;
- 
-   /* Set the [X] cursor while hovering a disabled link */
    cursor: not-allowed;
  }
  
@@ -525,6 +507,7 @@
  input[type="range"] {
    padding: 0;
  }
+*/
  
  a img {
    margin-bottom: 0px;
@@ -612,15 +595,11 @@
  }
  
  hr {
-   /* Reset the border of the <hr> separator, then set a better line */
    border: 0;
    border-bottom: 1px solid var(--light-background-c);
    margin: 1rem auto;
- 
    height: 0;
-   /* Add the correct box sizing in Firefox. */
    overflow: visible;
-   /* Show the overflow in Edge and IE. */
  }
  
  fieldset {
@@ -635,7 +614,6 @@
  }
  
  table {
-   /* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
    border-collapse: collapse;
    width: 100%
  }
@@ -661,12 +639,28 @@
    margin-bottom: .5rem;
  }
  
- textarea {
-   /* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
-   max-width: 100%;
+ /* Format forms */
+ /*
+ textarea,
+ select,
+ input {
+   padding: 6px 12px;
+   margin-bottom: .5rem;
+   background: var(--light-background-b);
+   color: var(--light-text-b);
+   border: 1px solid var(--light-background-c);
+   border-radius: 4px;
+   box-shadow: none;
+   box-sizing: border-box;
  }
  
- /* Format forms */
+ select,
+ textarea {
+   max-width: 100%;
+   width: 100%;
+   height: auto;
+ }
+
  textarea,
  select,
  input {
@@ -686,7 +680,6 @@
    appearance: none;
  }
  
- /* Add arrow to drop-down */
  select {
    background-image: linear-gradient(45deg, transparent 49%, var(--body-ligh) 51%),
      linear-gradient(135deg, var(--body-ligh) 51%, transparent 49%);
@@ -698,8 +691,7 @@
  select[multiple] {
    background-image: none !important;
  }
- 
- /* checkbox and radio button style */
+
  input[type="checkbox"],
  input[type="radio"] {
    vertical-align: bottom;
@@ -716,7 +708,6 @@
  }
  
  input[type="checkbox"]:checked::after {
-   /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
    content: " ";
    width: 0.1em;
    height: 0.25em;
@@ -732,7 +723,6 @@
  }
  
  input[type="radio"]:checked::after {
-   /* creates a colored circle for the checked radio button  */
    content: " ";
    width: 0.25em;
    height: 0.25em;
@@ -743,13 +733,11 @@
    left: 0.125em;
    font-size: 32px;
  }
- 
- /* Make the textarea wider than other inputs */
+
  textarea {
    width: 80%;
  }
  
- /* Makes input fields wider on smaller screens */
  @media only screen and (max-width: 720px) {
  
    textarea,
@@ -759,17 +747,19 @@
    }
  }
  
- /* Ensures the checkbox and radio inputs do not have a set width like other input fields */
+
  input[type="checkbox"],
  input[type="radio"] {
    width: auto;
  }
  
- /* do not show border around file selector button */
+
  input[type="file"] {
    border: 0;
  }
- 
+ */
+
+
  ol,
  ul {
    /* Replace the browser default padding */
@@ -792,27 +782,7 @@
    background: var(--light-highlight-a);
    color: var(--light-highlight-text);
  }
- 
- textarea,
- select,
- input {
-   padding: 6px 12px;
-   margin-bottom: .5rem;
-   background: var(--light-background-b);
-   color: var(--light-text-b);
-   border: 1px solid var(--light-background-c);
-   /*border-radius: 4px;*/
-   box-shadow: none;
-   box-sizing: border-box;
- }
- 
- select,
- textarea {
-   max-width: 100%;
-   width: 100%;
-   height: auto;
- }
- 
+
  img, video, object, iframe, canvas, embed, picture {
    max-width: 100%;
    height: auto;

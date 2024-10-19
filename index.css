@@ -21,8 +21,6 @@
    --font-size: 16px;
    --font-s: 14px;
    --font-size-serif: 18px;
- 
- 
    --content-width: 100ch;
    --spacing: 1.5em;
    --spacing-s: calc(0.5 * var(--spacing));
@@ -34,11 +32,9 @@
    --spacing-width-max: 38rem;
    --spacing-width-tiny: 15rem;
    --spacing-width-xl: 50rem;
- 
    --logo-width-max: 38rem;
    --logo-width-tiny: 15rem;
    --logo-width-xl: 50rem;
- 
    /* light */
    --svg-background-light: #2C302F;
    --svg-logo-color-light: #B5C9BD;
@@ -52,7 +48,6 @@
    --body-light: #2C302F;
    --selection-color-light: #2C302F;
    --selection-background-light: #B5C9BD;
- 
    /* dark */
    --svg-background-dark: #B5C9BD;
    --svg-logo-color-dark: #2C302F;
@@ -155,7 +150,9 @@
    hanging-punctuation: first last;
  }
  
- html[data-theme='light'] {}
+ html[data-theme='light'] {
+
+ }
  
  html[data-theme='dark'] {
    border-top: 0.5em solid var(--line-light);
@@ -324,8 +321,6 @@
    color: var(--link-hover-light);
  }
  
- 
- 
  a svg {
    text-decoration: none;
  }
@@ -446,69 +441,6 @@
   border-top: 1px solid var(--line-light);
   margin-bottom: 1rem;
 }
-/* 
- a button,
- button,
- [role="button"],
- input[type="submit"],
- input[type="reset"],
- input[type="button"] {
-   font-size: 1rem;
-   display: inline-block;
-   padding: 6px 12px;
-   text-align: center;
-   text-decoration: none;
-   white-space: nowrap;
-   background: var(--light-link-a);
-   color: var(--light-link-text);
-   border: 0;
-   border-radius: 4px;
-   box-sizing: border-box;
-   cursor: pointer;
-   color: var(--light-link-text);
- }
- 
- a button[disabled],
- button[disabled],
- [role="button"][aria-disabled="true"],
- input[type="submit"][disabled],
- input[type="reset"][disabled],
- input[type="button"][disabled],
- input[type="checkbox"][disabled],
- input[type="radio"][disabled],
- select[disabled] {
-   cursor: default;
-   opacity: .5;
-   cursor: not-allowed;
- }
- 
- button:focus,
- button:enabled:hover,
- [role="button"]:focus,
- [role="button"]:not([aria-disabled="true"]):hover,
- input[type="submit"]:focus,
- input[type="submit"]:enabled:hover,
- input[type="reset"]:focus,
- input[type="reset"]:enabled:hover,
- input[type="button"]:focus,
- input[type="button"]:enabled:hover {
-   background: var(--light-link-b);
-   filter: brightness(1.4);
-   cursor: pointer;
- }
- 
- input:disabled,
- textarea:disabled,
- select:disabled {
-   cursor: not-allowed;
-   background-color: var(--disabled);
- }
- 
- input[type="range"] {
-   padding: 0;
- }
-*/
- 
  a img {
    margin-bottom: 0px;
  }
@@ -638,9 +570,115 @@
    font-weight: bold;
    margin-bottom: .5rem;
  }
+
+ ol,
+ ul {
+   /* Replace the browser default padding */
+   padding-left: 2rem;
+ }
  
- /* Format forms */
+ li {
+   margin-top: .4rem;
+ }
+ 
+ ul ul,
+ ol ul,
+ ul ol,
+ ol ol {
+   margin-bottom: 0;
+ }
+ 
+ mark {
+   padding: 3px 6px;
+   background: var(--light-highlight-a);
+   color: var(--light-highlight-text);
+ }
+
+ img, video, object, iframe, canvas, embed, picture {
+   max-width: 100%;
+   height: auto;
+ }
+ 
+ iframe {
+   border-style: none;
+ }
+ 
+ figure,
+ audio,
+ video {
+   max-width: var(--spacing-width-xl);
+   margin-left: auto;
+   margin-right: auto;
+ }
+ 
+ figure figcaption {
+
+ }
+
+
+  /* Format forms */
  /*
+ a button,
+ button,
+ [role="button"],
+ input[type="submit"],
+ input[type="reset"],
+ input[type="button"] {
+   font-size: 1rem;
+   display: inline-block;
+   padding: 6px 12px;
+   text-align: center;
+   text-decoration: none;
+   white-space: nowrap;
+   background: var(--light-link-a);
+   color: var(--light-link-text);
+   border: 0;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: var(--light-link-text);
+ }
+ 
+ a button[disabled],
+ button[disabled],
+ [role="button"][aria-disabled="true"],
+ input[type="submit"][disabled],
+ input[type="reset"][disabled],
+ input[type="button"][disabled],
+ input[type="checkbox"][disabled],
+ input[type="radio"][disabled],
+ select[disabled] {
+   cursor: default;
+   opacity: .5;
+   cursor: not-allowed;
+ }
+ 
+ button:focus,
+ button:enabled:hover,
+ [role="button"]:focus,
+ [role="button"]:not([aria-disabled="true"]):hover,
+ input[type="submit"]:focus,
+ input[type="submit"]:enabled:hover,
+ input[type="reset"]:focus,
+ input[type="reset"]:enabled:hover,
+ input[type="button"]:focus,
+ input[type="button"]:enabled:hover {
+   background: var(--light-link-b);
+   filter: brightness(1.4);
+   cursor: pointer;
+ }
+ 
+ input:disabled,
+ textarea:disabled,
+ select:disabled {
+   cursor: not-allowed;
+   background-color: var(--disabled);
+ }
+ 
+ input[type="range"] {
+   padding: 0;
+ }
+
  textarea,
  select,
  input {
@@ -758,51 +796,8 @@
    border: 0;
  }
  */
-
-
- ol,
- ul {
-   /* Replace the browser default padding */
-   padding-left: 2rem;
- }
  
- li {
-   margin-top: .4rem;
- }
- 
- ul ul,
- ol ul,
- ul ol,
- ol ol {
-   margin-bottom: 0;
- }
- 
- mark {
-   padding: 3px 6px;
-   background: var(--light-highlight-a);
-   color: var(--light-highlight-text);
- }
-
- img, video, object, iframe, canvas, embed, picture {
-   max-width: 100%;
-   height: auto;
- }
- 
- iframe {
-   border-style: none;
- }
- 
- figure,
- audio,
- video {
-   max-width: var(--spacing-width-xl);
-   margin-left: auto;
-   margin-right: auto;
- }
- 
- figure figcaption {}
- 
- /* Block Element */
+ /* Classes Element */
  
  .color-white {
    color: #FFFFFF;

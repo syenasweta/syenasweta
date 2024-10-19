@@ -318,59 +318,59 @@
  h6 {
    font-size: .875rem;
  }
-
-a, button, input, select, textarea, label, summary {
-  touch-action: manipulation;
-}
-a, a * {
-    text-decoration: underline;
-}
-a:link {
-    color: var(--link-light);
-}
-a:visited {
-    color: var(--link-visited-light);
-}
-a:hover,
-a:focus,
-a:active {
-    color: var(--link-hover-light);
-} 
-
-
-
+ 
+ a, button, input, select, textarea, label, summary {
+   touch-action: manipulation;
+ }
+ a, a * {
+   text-decoration: underline;
+ }
+ a:link {
+   color: var(--link-light);
+ }
+ a:visited {
+   color: var(--link-visited-light);
+ }
+ a:hover,
+ a:focus,
+ a:active {
+   color: var(--link-hover-light);
+ }
+ 
+ 
+ 
  a svg {
    text-decoration: none;
  }
-
-em, i {
-  font-style: italic;
-}
-strong, b {
-  font-weight: bold;
-}
-u {
-  text-decoration: none;
-}
+ 
+ em, i {
+   font-style: italic;
+ }
+ strong, b {
+   font-weight: bold;
+ }
+ u {
+   text-decoration: none;
+ }
  
  abbr:hover {
    cursor: help;
  }
-
-blockquote {
-  font-family: var(--font-serif);
-  font-size: 0.9375rem;
-  padding: 0.0666em 2em;
-}
-blockquote * {
-  font-style: italic;
-}
-blockquote * em {
-  font-style: normal;
-}
-blockquote * strong {
-  font-weight: bold;
-}
+ 
+ blockquote {
+   font-family: var(--font-serif);
+   font-size: 0.9375rem;
+   padding: 0.0666em 2em;
+ }
+ blockquote * {
+   font-style: italic;
+ }
+ blockquote * em {
+   font-style: normal;
+ }
+ blockquote * strong {
+   font-weight: bold;
+ }
  
  abbr {
    border: 0;
@@ -390,12 +390,12 @@ blockquote * strong {
    margin: -2rem calc(50% - 50vw) 2rem;
  
    /* Shorthand for:
-   
-     margin-top: -2rem;
-     margin-bottom: 2rem;
-   
-     margin-left: calc(50% - 50vw);
-     margin-right: calc(50% - 50vw); */
+    
+      margin-top: -2rem;
+      margin-bottom: 2rem;
+    
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw); */
  
    padding-left: calc(50vw - 50%);
    padding-right: calc(50vw - 50%);
@@ -416,42 +416,42 @@ blockquote * strong {
  header>*:last-child {
    margin-bottom: 0;
  }
-
+ 
  header nav {
-  font-family: var(--font-overpass);
-  background-color: var(--background-light);
-  color: var(--link-light);
-  font-weight: bold;
-  padding: 0.5em;
-}
-header nav a {
-  font-weight: bold;
-  text-decoration: none;
-}
-header nav a:link,
-header nav a:visited {
-  color: var(--link-visited-light);
-}
-header nav a:hover,
-header nav a:focus,
-header nav a:active {
-  color: var(--link-hover-light);
-}
-header nav a.here {
-  color: var(--link-hover-light);
-}
-header nav ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow: hidden;
-}
-header nav ul li {
-  list-style: none;
-  float: left;
-  padding: 0 1.2em 0 0;
-}
-
+   font-family: var(--font-overpass);
+   background-color: var(--background-light);
+   color: var(--link-light);
+   font-weight: bold;
+   padding: 0.5em;
+ }
+ header nav a {
+   font-weight: bold;
+   text-decoration: none;
+ }
+ header nav a:link,
+ header nav a:visited {
+   color: var(--link-visited-light);
+ }
+ header nav a:hover,
+ header nav a:focus,
+ header nav a:active {
+   color: var(--link-hover-light);
+ }
+ header nav a.here {
+   color: var(--link-hover-light);
+ }
+ header nav ul {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   overflow: hidden;
+ }
+ header nav ul li {
+   list-style: none;
+   float: left;
+   padding: 0 1.2em 0 0;
+ }
+ 
  
  a button,
  button,
@@ -645,9 +645,9 @@ header nav ul li {
  }
  
  /*tr:nth-child(even) {
-     Set every other cell slightly darker. Improves readability.
-     background: var(--light-background-b);
-   }*/
+      Set every other cell slightly darker. Improves readability.
+      background: var(--light-background-b);
+    }*/
  
  table caption {
    font-weight: bold;
@@ -798,18 +798,18 @@ header nav ul li {
    box-shadow: none;
    box-sizing: border-box;
  }
-
+ 
  select,
  textarea {
    max-width: 100%;
    width: 100%;
    height: auto;
  }
-
+ 
  img, video, object, iframe, canvas, embed, picture {
-  max-width: 100%;
-  height: auto;
-}
+   max-width: 100%;
+   height: auto;
+ }
  
  iframe {
    border-style: none;
@@ -823,9 +823,7 @@ header nav ul li {
    margin-right: auto;
  }
  
- figure figcaption {
-
- }
+ figure figcaption {}
  
  /* Block Element */
  
@@ -910,5 +908,5 @@ header nav ul li {
    white-space: nowrap;
    border-width: 0;
  }
-
-  /* Inline Element */
+ 
+ /* Inline Element */

@@ -46,6 +46,9 @@
    --background-light: #E9EAEB;
    --line-light: #2C302F;
    --heading-light: #2C302F;
+   --link-light: #74A69A;
+   --link-visited-light: #B5C9BD;
+   --link-hover-light: #B5C9BD;
    --body-light: #2C302F;
    --selection-color-light: #2C302F;
    --selection-background-light: #B5C9BD;
@@ -57,6 +60,9 @@
    --background-dark: #2C302F;
    --line-dark: #E9EAEB;
    --heading-dark: #E9EAEB;
+   --link-dark: #74A69A;
+   --link-visited-dark: #B5C9BD;
+   --link-hover-dark: #B5C9BD;
    --body-dark: #E9EAEB;
    --selection-color-dark: #2C302F;
    --selection-background-dark: #B5C9BD;
@@ -74,12 +80,14 @@
      --background-light: var(--background-dark);
      --line-light: var(--line-dark);
      --heading-light: var(--heading-dark);
+     --link-light: var(--link-dark);
+     --link-visited-light: var(--link-visited-dark);
+     --link-hover-light: var(--link-hover-dark);
      --body-light: var(--body-dark);
      --selection-color-light: var(--selection-color-dark);
      --selection-background-light: var(--selection-background-dark);
  
    }
- 
    /* Add a bit of transparancy so light media isn't so glaring in dark mode */
    img,
    video {
@@ -92,7 +100,6 @@
    html:focus-within {
      scroll-behavior: auto;
    }
- 
    *,
    ::before,
    ::after {
@@ -314,15 +321,15 @@
  }
  
  a {
-   color: var(--heading-light);
+   color: var(--link-light);
  }
  
  a:visited {
-   color: var(--body-light);
+   color: var(--link-visited-light);
  }
  
  a:hover {
-   color: var(--body-light);
+   color: var(--link-hover-light);
  }
  
  abbr:hover {

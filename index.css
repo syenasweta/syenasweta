@@ -112,6 +112,10 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   text-decoration: none;
+   text-transform: none;
+   font-weight: normal;
+   font-style: normal;
    text-rendering: geometricPrecision;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
@@ -140,6 +144,8 @@
    border-top: 0.3em solid;
    border-color:var(--line-light);
    max-width: 100%;
+   /*font-size: clamp(100%, 50% + 0.666vw, 150%);*/
+   hanging-punctuation: first last;
  }
  
  html[data-theme='light'] {}

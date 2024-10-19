@@ -47,7 +47,8 @@
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="index.css?v=fdsfhghjd" title="system">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/panda-syntax-dark.css">
+  <link rel="stylesheet" href="index.css?v=fdsfhghjddsds" title="system">
   <link rel="stylesheet" href="print.css" media="print" title="print">
 </head>
 
@@ -81,6 +82,7 @@
               </g>
             </g>
           </svg>
+          <span class="sr-only">Syenasweta</span>
         </a>
       </h1>
     </hgroup>
@@ -99,7 +101,26 @@
       </header>
       <p>Syenasweta is the online home of Nashrullah Ali Fauzi, a web developer and author living and working in Jakarta, Indonesia.</p>
       <p>It's currently being designed online.</p>
-      <hr>
+      <pre><code class="language-bash">naf@syenasweta:~$ neofetch
+        _,met$$$$$gg.          naf@syenasweta 
+     ,g$$$$$$$$$$$$$$$P.       -------------- 
+   ,g$$P"     """Y$$.".        OS: Debian GNU/Linux 12 (bookworm) x86_64 
+  ,$$P'              `$$$.     Host: Aspire E5-473G V1.13 
+ ',$$P       ,ggs.     `$$b:   Kernel: 6.1.0-26-amd64 
+ `d$$'     ,$P"'   .    $$$    Uptime: 1 hour, 38 mins 
+  $$P      d$'     ,    $$P    Packages: 3748 (dpkg), 19 (flatpak) 
+  $$:      $$.   -    ,d$$'    Shell: bash 5.2.15 
+  $$;      Y$b._   _,d$P'      Resolution: 1366x768 
+  Y$$.    `.`"Y$$$$P"'         DE: GNOME 43.9 
+  `$$b      "-.__              WM: Mutter 
+   `Y$$                        WM Theme: Adwaita 
+    `Y$$.                      Theme: Adwaita-dark [GTK2/3] 
+      `$$b.                    Icons: Papirus-Dark [GTK2/3] 
+        `Y$$b.                 Terminal: terminator 
+           `"Y$b._             CPU: Intel i3-5005U (4) @ 1.900GHz 
+               `"""            GPU: NVIDIA GeForce 920M 
+                               GPU: Intel HD Graphics 5500 
+                               Memory: 3367MiB / 7855MiB</code></pre>
     </article>
     <article>
       <header>
@@ -277,29 +298,31 @@
       </section>
       <section>
         <h2>Preformatted Text</h2>
-        <pre>
-            P R E F O R M A T T E D T E X T
-            ! " # $ % &amp; ' ( ) * + , - . /
-            0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
-            @ A B C D E F G H I J K L M N O
-            P Q R S T U V W X Y Z [ \ ] ^ _
-            ` a b c d e f g h i j k l m n o
-            p q r s t u v w x y z { | } ~
-          </pre>
+        <pre>.sr-only, .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+          }</pre>
       </section>
       <section>
         <h2>Code Blocks</h2>
-        <pre>
-            <code>
-              .card-thumb {
-                margin-bottom: 12px;
-              }
-              
-              .card-title {
-                margin-bottom: 12px;
-              }
-            </code>
-          </pre>
+        <pre><code class="language-css">.sr-only, .visually-hidden {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border-width: 0;
+        }</code></pre>
       </section>
       <section>
         <h2>Form</h2>
@@ -431,9 +454,11 @@
 
   </aside>
   <footer>
-    <p>Copyright © 2024 <a href="">Nashrullah Ali Fauzi</a></p>
+    <p>Copyright © 2024 <a href="/">Nashrullah Ali Fauzi</a></p>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </body>
 
 </html>

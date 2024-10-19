@@ -12,7 +12,7 @@
  @import url("https://fonts.googleapis.com/css2?family=Alice&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
  
  :root {
-  
+ 
    color-scheme: light dark;
    --font-sans: "Lora", sans-serif;
    --font-serif: "Alice", serif;
@@ -34,7 +34,7 @@
    --spacing-width-max: 38rem;
    --spacing-width-tiny: 15rem;
    --spacing-width-xl: 50rem;
-
+ 
    --logo-width-max: 38rem;
    --logo-width-tiny: 15rem;
    --logo-width-xl: 50rem;
@@ -67,10 +67,10 @@
    --selection-color-dark: #2C302F;
    --selection-background-dark: #B5C9BD;
  }
-
+ 
  @view-transition {
-  navigation: auto;
-}
+   navigation: auto;
+ }
  
  @media (prefers-color-scheme: dark) {
    :root {
@@ -149,7 +149,7 @@
  
  html {
    border-top: 0.3em solid;
-   border-color:var(--line-light);
+   border-color: var(--line-light);
    max-width: 100%;
    /*font-size: clamp(100%, 50% + 0.666vw, 150%);*/
    hanging-punctuation: first last;
@@ -322,6 +322,7 @@
  
  a {
    color: var(--link-light);
+   text-decoration: underline;
  }
  
  a:visited {
@@ -330,6 +331,10 @@
  
  a:hover {
    color: var(--link-hover-light);
+ }
+ 
+ a svg {
+   text-decoration: none;
  }
  
  abbr:hover {
@@ -358,12 +363,12 @@
    margin: -2rem calc(50% - 50vw) 2rem;
  
    /* Shorthand for:
-  
-    margin-top: -2rem;
-    margin-bottom: 2rem;
-  
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw); */
+   
+     margin-top: -2rem;
+     margin-bottom: 2rem;
+   
+     margin-left: calc(50% - 50vw);
+     margin-right: calc(50% - 50vw); */
  
    padding-left: calc(50vw - 50%);
    padding-right: calc(50vw - 50%);
@@ -465,23 +470,20 @@
    font-family: var(--font-mono);
  }
  
- code,
  samp,
- kbd,
- pre {
+ kbd {
    /* The main preformatted style. This is changed slightly across different cases. */
-   border: 1px solid var(--light-background-c);
+   border: 1px solid var(--line-light);
    padding: 3px 6px;
    /* ↓ font-size is relative to containing element, so it scales for titles*/
    font-size: 0.9em;
  }
  
  kbd {
-   border-bottom: 3px solid var(--light-background-c);
+   border-bottom: 3px solid var(--line-light);
  }
  
  pre {
-   padding: 1rem 1.4rem;
    max-width: 100%;
    overflow: auto;
  }
@@ -586,9 +588,9 @@
  }
  
  /*tr:nth-child(even) {
-    Set every other cell slightly darker. Improves readability.
-    background: var(--light-background-b);
-  }*/
+     Set every other cell slightly darker. Improves readability.
+     background: var(--light-background-b);
+   }*/
  
  table caption {
    font-weight: bold;
@@ -855,15 +857,15 @@
    display: block;
    unicode-bidi: isolate;
  }
-
+ 
  .sr-only, .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border-width: 0;
+ }

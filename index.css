@@ -554,17 +554,6 @@
    overflow: visible;
  }
  
- fieldset {
-   margin-top: 1rem;
-   padding: 2rem;
-   border: 1px solid var(--light-background-c);
-   border-radius: 4px;
- }
- 
- legend {
-   padding: auto .5rem;
- }
- 
  table {
    border-collapse: collapse;
    width: 100%
@@ -626,7 +615,6 @@
  figure,
  audio,
  video {
-   max-width: var(--spacing-width-xl);
    margin-left: auto;
    margin-right: auto;
  }
@@ -636,6 +624,17 @@
  
  /* Format forms */
  /*
+ fieldset {
+   margin-top: 1rem;
+   padding: 2rem;
+   border: 1px solid var(--light-background-c);
+   border-radius: 4px;
+ }
+ 
+ legend {
+   padding: auto .5rem;
+ }
+
   a button,
   button,
   [role="button"],

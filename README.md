@@ -45,3 +45,4 @@
 - https://remixicon.com/
 - https://jsfiddle.net/tovic/eU5PN/embedded/result,html,css
 - https://jamesg.blog/
+- https://remixicon.com/

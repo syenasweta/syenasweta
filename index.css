@@ -425,6 +425,7 @@ a[rel="next"] {
    padding: 0.5em;
  }
  header nav a {
+   color: var(--link-color-light);
    font-weight: bold;
    text-decoration: none;
  }
@@ -462,7 +463,8 @@ a[rel="next"] {
    width: var(--logo-width-tiny);
    content: "";
    display: block;
-   border-top: 1px solid var(--line-light);
+   border-top: 1px solid;
+   border-color: var(--line-light);
    margin-bottom: 1rem;
  }
  footer nav {
@@ -473,6 +475,7 @@ a[rel="next"] {
    padding: 0.5em;
  }
  footer nav a {
+   color: var(--link-color-light);
    font-weight: bold;
    text-decoration: none;
  }

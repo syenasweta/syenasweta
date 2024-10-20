@@ -1,15 +1,6 @@
-/*
- * Syenasweta.com
- * The online home
- * Author: Nashrullah Ali Fauzi
- * Version: 1.0.0
- * License:  MIT License
- * Project: https://github.com/syenasweta
- */
+@charset "UTF-8";
 
- @charset "UTF-8";
-
- @import url("https://fonts.googleapis.com/css2?family=Alice&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
  
  :root {
  
@@ -307,23 +298,49 @@
    font-size: .875rem;
  }
  
- a, button, input, select, textarea, label, summary {
-   touch-action: manipulation;
- }
- a, a * {
-   text-decoration: underline;
- }
- a:link {
-   color: var(--link-light);
- }
- a:visited {
-   color: var(--link-visited-light);
- }
- a:hover,
- a:focus,
- a:active {
-   color: var(--link-hover-light);
- }
+a, button, input, select, textarea, label, summary {
+  touch-action: manipulation;
+}
+a, a * {
+    text-decoration: underline;
+    color: var(--link-light);
+}
+a:link {
+    color: var(--link-light);
+}
+a:visited {
+    color: var(--link-visited-light);
+}
+a:hover,
+a:focus,
+a:active {
+    color: var(--link-hover-light);
+}
+
+a[rel="prev"],
+a[rel="next"],
+button,
+.button,
+input[type="submit"],
+::file-selector-button {
+    display: inline-block;
+    line-height: 1.73;
+    border: none;
+    border-radius: 1em;
+    text-decoration: none;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+a[rel="prev"] {
+    float: left;
+    padding-left: 0.6em;
+    padding-right: 1em;
+}
+a[rel="next"] {
+    float: right;
+    padding-left: 1em;
+    padding-right: 0.6em;
+}
  
  a svg {
    text-decoration: none;
@@ -400,39 +417,30 @@
    margin-bottom: 0;
  }
  
- header nav,
- footer nav {
+ header nav {
    font-family: var(--font-overpass);
    background-color: var(--background-light);
    color: var(--link-light);
    font-weight: bold;
    padding: 0.5em;
  }
- header nav a,
- footer nav a {
+ header nav a {
    font-weight: bold;
    text-decoration: none;
  }
  header nav a:link,
- header nav a:visited,
- footer nav a:link,
- footer nav a:visited {
+ header nav a:visited {
    color: var(--link-visited-light);
  }
  header nav a:hover,
  header nav a:focus,
- header nav a:active,
- footer nav a:hover,
- footer nav a:focus,
- footer nav a:active {
+ header nav a:active {
    color: var(--link-hover-light);
  }
- header nav a.here,
- footer nav a.here {
+ header nav a.here {
    color: var(--link-hover-light);
  }
- header nav ul,
- footer nav ul {
+ header nav ul {
    margin: 0;
    padding: 0;
    width: 100%;
@@ -443,8 +451,7 @@
    gap: 0.3rem;
  
  }
- header nav ul li,
- footer nav ul li {
+ header nav ul li {
    list-style: none;
    float: left;
    padding: 0 1.2em 0 0;
@@ -458,6 +465,48 @@
    border-top: 1px solid var(--line-light);
    margin-bottom: 1rem;
  }
+ footer nav {
+   font-family: var(--font-overpass);
+   background-color: var(--background-light);
+   color: var(--link-light);
+   font-weight: bold;
+   padding: 0.5em;
+ }
+ footer nav a {
+   font-weight: bold;
+   text-decoration: none;
+ }
+ footer nav a:link,
+ footer nav a:visited {
+   color: var(--link-visited-light);
+ }
+ footer nav a:hover,
+ footer nav a:focus,
+ footer nav a:active {
+   color: var(--link-hover-light);
+ }
+ footer nav a.here {
+   color: var(--link-hover-light);
+ }
+ footer nav ul {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: left;
+   gap: 0.1rem;
+ 
+ }
+
+ footer nav ul li {
+   list-style: none;
+   float: left;
+   padding: 0 1.2em 0 0;
+ }
+
+
  a img {
    margin-bottom: 0px;
  }

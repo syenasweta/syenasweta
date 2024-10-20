@@ -476,6 +476,7 @@
    padding: 3px 6px;
    /* ↓ font-size is relative to containing element, so it scales for titles*/
    font-size: 0.9em;
+   border-radius: .25rem;
  }
  
  kbd {
@@ -536,15 +537,7 @@
    /* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
    margin-bottom: 0;
  }
- 
- dt {
-   font-weight: bold;
- }
- 
- dd::before {
-   /* Add an arrow to data table definitions */
-   content: '→ ';
- }
+
  
  hr {
    border: 0;
@@ -553,7 +546,8 @@
    height: 0;
    overflow: visible;
  }
- 
+
+ /*
  table {
    border-collapse: collapse;
    width: 100%
@@ -568,16 +562,25 @@
  
  th {
    background: var(--light-background-b);
- }
+ }*/
  
  /*tr:nth-child(even) {
        Set every other cell slightly darker. Improves readability.
        background: var(--light-background-b);
      }*/
- 
+ /*
  table caption {
    font-weight: bold;
    margin-bottom: .5rem;
+ }*/
+
+
+ dt {
+   font-weight: bold;
+ }
+ 
+ dd::before {
+   content: '→ ';
  }
  
  ol,
@@ -623,196 +626,6 @@
  
  
  /* Format forms */
- /*
- fieldset {
-   margin-top: 1rem;
-   padding: 2rem;
-   border: 1px solid var(--light-background-c);
-   border-radius: 4px;
- }
- 
- legend {
-   padding: auto .5rem;
- }
-
-  a button,
-  button,
-  [role="button"],
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"] {
-    font-size: 1rem;
-    display: inline-block;
-    padding: 6px 12px;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    background: var(--light-link-a);
-    color: var(--light-link-text);
-    border: 0;
-    border-radius: 4px;
-    box-sizing: border-box;
-    cursor: pointer;
-    color: var(--light-link-text);
-  }
-  
-  a button[disabled],
-  button[disabled],
-  [role="button"][aria-disabled="true"],
-  input[type="submit"][disabled],
-  input[type="reset"][disabled],
-  input[type="button"][disabled],
-  input[type="checkbox"][disabled],
-  input[type="radio"][disabled],
-  select[disabled] {
-    cursor: default;
-    opacity: .5;
-    cursor: not-allowed;
-  }
-  
-  button:focus,
-  button:enabled:hover,
-  [role="button"]:focus,
-  [role="button"]:not([aria-disabled="true"]):hover,
-  input[type="submit"]:focus,
-  input[type="submit"]:enabled:hover,
-  input[type="reset"]:focus,
-  input[type="reset"]:enabled:hover,
-  input[type="button"]:focus,
-  input[type="button"]:enabled:hover {
-    background: var(--light-link-b);
-    filter: brightness(1.4);
-    cursor: pointer;
-  }
-  
-  input:disabled,
-  textarea:disabled,
-  select:disabled {
-    cursor: not-allowed;
-    background-color: var(--disabled);
-  }
-  
-  input[type="range"] {
-    padding: 0;
-  }
- 
-  textarea,
-  select,
-  input {
-    padding: 6px 12px;
-    margin-bottom: .5rem;
-    background: var(--light-background-b);
-    color: var(--light-text-b);
-    border: 1px solid var(--light-background-c);
-    border-radius: 4px;
-    box-shadow: none;
-    box-sizing: border-box;
-  }
-  
-  select,
-  textarea {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
- 
-  textarea,
-  select,
-  input {
-    font-size: inherit;
-    font-family: inherit;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--heading-light);
-    background: var(--background-light);
-    border: 1px solid var(--line-light);
-    border-radius: 2px;
-    box-shadow: none;
-    box-sizing: border-box;
-    width: 60%;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-  }
-  
-  select {
-    background-image: linear-gradient(45deg, transparent 49%, var(--body-ligh) 51%),
-      linear-gradient(135deg, var(--body-ligh) 51%, transparent 49%);
-    background-position: calc(100% - 20px), calc(100% - 15px);
-    background-size: 5px 5px, 5px 5px;
-    background-repeat: no-repeat;
-  }
-  
-  select[multiple] {
-    background-image: none !important;
-  }
- 
-  input[type="checkbox"],
-  input[type="radio"] {
-    vertical-align: bottom;
-    position: relative;
-  }
-  
-  input[type="radio"] {
-    border-radius: 100%;
-  }
-  
-  input[type="checkbox"]:checked,
-  input[type="radio"]:checked {
-    background: var(--svg-background-light);
-  }
-  
-  input[type="checkbox"]:checked::after {
-    content: " ";
-    width: 0.1em;
-    height: 0.25em;
-    border-radius: 0;
-    position: absolute;
-    top: 0.05em;
-    left: 0.18em;
-    background: transparent;
-    border-right: solid var(--bg) 0.08em;
-    border-bottom: solid var(--bg) 0.08em;
-    font-size: 1.8em;
-    transform: rotate(45deg);
-  }
-  
-  input[type="radio"]:checked::after {
-    content: " ";
-    width: 0.25em;
-    height: 0.25em;
-    border-radius: 100%;
-    position: absolute;
-    top: 0.125em;
-    background: var(--bg);
-    left: 0.125em;
-    font-size: 32px;
-  }
- 
-  textarea {
-    width: 80%;
-  }
-  
-  @media only screen and (max-width: 720px) {
-  
-    textarea,
-    select,
-    input {
-      width: 100%;
-    }
-  }
-  
- 
-  input[type="checkbox"],
-  input[type="radio"] {
-    width: auto;
-  }
-  
- 
-  input[type="file"] {
-    border: 0;
-  }
-  */
  
  /* Classes Element */
  

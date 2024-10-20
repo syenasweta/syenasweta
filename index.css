@@ -425,11 +425,13 @@ a[rel="next"] {
    padding: 0.5em;
  }
  header nav a {
-   color: var(--link-color-light);
+   color: var(--link-light);
    font-weight: bold;
    text-decoration: none;
  }
- header nav a:link,
+ header nav a:link {
+   color: var(--link-light);
+ }
  header nav a:visited {
    color: var(--link-visited-light);
  }
@@ -475,11 +477,13 @@ a[rel="next"] {
    padding: 0.5em;
  }
  footer nav a {
-   color: var(--link-color-light);
+   color: var(--link-light);
    font-weight: bold;
    text-decoration: none;
  }
- footer nav a:link,
+ footer nav a:link {
+  color: var(--link-light);
+ }
  footer nav a:visited {
    color: var(--link-visited-light);
  }

@@ -18,6 +18,8 @@
    --color-onyx-rgb: rgb(44, 48, 47);
    --color-sea-nymph: #74A69A;
    --color-sea-nymph-rgb: rgb(116, 166, 154);
+   --color-dandelion: #FFE063;
+   --color-dandelion-rgb: rgb(255, 224, 99);
    --font-sans: "Lora", sans-serif;
    --font-serif: "Alice", serif;
    --font-overpass: "Overpass", sans-serif;
@@ -967,4 +969,18 @@ button, input, select, textarea {
    margin-top: 16px;
    color: var(--secondary-text);
    font-size: .75rem
+ }
+ .copyright p mark {
+  font-family: var(--font-mono);
+  padding: 0.188rem 0.438rem;
+  background: var(--color-dandelion);
+  color: var(--color-onyx);
+  border-radius: 0.188rem 0.438rem 0.188rem;
+  margin: 0 auto;
+  flex-direction: row;
+  overflow-wrap: break-word;
+  overflow-x: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transform: translateY(-50%);
  }

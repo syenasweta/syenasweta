@@ -340,14 +340,11 @@
    transition: filter .3s ease;
    filter: brightness(1.2)
  }
- .button, ::file-selector-button, a[rel=next], a[rel=prev], button, input[type=submit] {
+ .button, ::file-selector-button, a[rel=next], a[rel=prev] {
    display: inline-block;
    line-height: 1.73;
    border: none;
-   border-radius: 1em;
    text-decoration: none;
-   padding-left: 1em;
-   padding-right: 1em
  }
  a[rel=prev] {
    float: left;
@@ -699,7 +696,7 @@
  form {
    font-family: var(--font-overpass)
  }
- button, input, select, textarea {
+button, input, select, textarea {
    font-family: var(--font-overpass);
    display: inline-block;
    vertical-align: middle;
@@ -778,7 +775,6 @@
  fieldset {
    margin: 0 0 1em;
    padding: 1em;
-   background-color: var(--body)
  }
  legend {
    margin: 0;

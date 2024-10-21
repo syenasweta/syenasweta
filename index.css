@@ -52,6 +52,8 @@
    --pre-background: light-dark(var(--color-onyx), var(--color-bright-grey));
    --line: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
    --line-b: light-dark(var(--color-onyx), var(--color-sea-nymph));
+   --kbd-bg:light-dark(var(--color-powder-ash), var(--color-powder-ash));
+   --kbd-color:light-dark(var(--color-onyx), var(--color-onyx));
    --heading: light-dark(var(--color-onyx), var(--color-bright-grey));
    --link: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
    --link-visited: light-dark(var(--color-powder-ash), var(--color-powder-ash));
@@ -225,12 +227,12 @@
  body>header>hgroup>h2 {
    font-size: 1rem
  }
- svg[class=logo-logotype] {
+ svg[class=svg-logo] {
    flex: none;
    transition: color .1s ease;
    color: inherit;
    max-width: 100%;
-   width: var(--logo-width-tiny);
+   width: 64px;
    height: auto
  }
  svg path.square {
@@ -239,6 +241,14 @@
  svg path.logo {
    fill: var(--svg-logo-color)
  }
+ svg[class=svg-logotype] {
+  flex: none;
+  transition: color .1s ease;
+  color: inherit;
+  max-width: 100%;
+  width: var(--logo-width-tiny);
+  height: auto
+}
  svg path.logotype {
    fill: var(--svg-logotype-color)
  }
@@ -549,14 +559,20 @@
  code, kbd, pre, samp {
    font-family: var(--font-mono)
  }
- kbd, samp {
+samp {
    border: 1px solid var(--line);
    padding: 3px 6px;
    font-size: .9em;
    border-radius: .25rem
  }
  kbd {
-   border-bottom: 3px solid var(--line)
+  font-size: var(--font-s);
+  background-color: var(--kbd-bg);
+  color:var(--kbd-color);
+  border: 1px solid var(--line);
+  padding: 3px 6px;
+  border-radius: .25rem;
+  border-bottom: 3px solid var(--line)
  }
  pre {
    max-width: 100%;

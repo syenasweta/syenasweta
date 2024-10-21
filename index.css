@@ -539,6 +539,11 @@
    color: var(--body-light);
    line-height: 1.5
  }
+
+ q::after,
+q::before {
+  content: "”"
+}
  
  blockquote {
    font-family: var(--font-serif);
@@ -670,7 +675,7 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: left;
-   gap: .3rem
+   gap: .3rem;
  }
  
  header nav ul li {
@@ -921,8 +926,18 @@
  figure>img {
    max-width: 100%;
    height: auto;
-   filter: drop-shadow(.35rem .35rem .4rem rgba(0, 0, 0, .5))
+   filter: drop-shadow(.35rem .35rem .4rem rgba(0, 0, 0, .5));
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
+   opacity: .9;
+   cursor: not-allowed
  }
+
+ figure>img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  opacity: 1
+}
  
  @supports (filter:drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5))) {
    figure>img {
@@ -1219,6 +1234,7 @@
  }
  
  .copyright {
+  font-family: var(--font-overpass);
    grid-area: legal;
    display: flex;
    flex-direction: column;

@@ -48,7 +48,7 @@
    --blockquote: light-dark(var(--color-bright-grey), var(--color-onyx));
    --blockquote-background: light-dark(var(--color-onyx), var(--color-bright-grey));
    --pre-background: light-dark(var(--color-onyx), var(--color-bright-grey));
-   --line: light-dark(var(--color-onyx), var(--color-bright-grey));
+   --line: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
    --heading: light-dark(var(--color-onyx), var(--color-bright-grey));
    --link: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
    --link-visited: light-dark(var(--color-powder-ash), var(--color-powder-ash));
@@ -98,8 +98,6 @@
    }
  }
  
- 
- 
  @media (prefers-reduced-motion:reduce) {
    html:focus-within {
      scroll-behavior: auto
@@ -114,10 +112,7 @@
      transition-duration: 0 !important
    }
  }
- :root {
-   border-top: .3em solid;
-   border-color: var(--line)
- }
+
  *, ::after, ::before {
    margin: 0;
    padding: 0;
@@ -132,6 +127,11 @@
    -moz-osx-font-smoothing: grayscale;
    -webkit-tap-highlight-color: transparent
  }
+ :root {
+  border-top: .3em solid;
+  border-bottom: 2.188em solid;
+  border-color: var(--line)
+}
  canvas, img, picture, svg, video {
    display: block;
    max-width: 100%
@@ -775,11 +775,15 @@ button, input, select, textarea {
  fieldset {
    margin: 0 0 1em;
    padding: 1em;
+   border-color: var(--line);
+   border-radius: .25rem;
  }
  legend {
    margin: 0;
    padding: 0 10px;
-   font-weight: 700
+   font-family: var(--font-overpass);
+   font-weight: 500;
+   color:var(--line);
  }
  button[disabled], input[disabled], select[disabled], textarea[disabled] {
    opacity: .7;
@@ -807,10 +811,16 @@ button, input, select, textarea {
    white-space: nowrap;
    border-width: 0
  }
- 
+ label>svg {
+  margin: 0.188rem auto;
+ }
  input[type=radio][name=color-scheme]+label {
+  height: 1.875rem;
+  width: 1.875rem;
+  border-radius: .25rem;
    background: var(--background-theme-color);
    color: var(--theme-color);
+   transition: background-color 0.2s ease;
  }
  input[type=radio][name=color-scheme]:hover+label {
    background: var(--hover-background-theme-color);

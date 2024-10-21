@@ -246,7 +246,7 @@
   transition: color .1s ease;
   color: inherit;
   max-width: 100%;
-  width: var(--logo-width-tiny);
+  width: var(--logo-width-max);
   height: auto
 }
  svg path.logotype {

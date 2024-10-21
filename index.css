@@ -141,6 +141,12 @@
   border-bottom: 2.188em solid;
   border-color: var(--line)
 }
+
+*:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: .25rem;
+  border-radius: .125rem
+}
  canvas, img, picture, svg, video {
    display: block;
    max-width: 100%
@@ -190,8 +196,6 @@
    margin-bottom: 1rem
  }
  body {
-   -webkit-font-smoothing: antialiased;
-   text-rendering: optimizeLegibility;
    font-family: var(--font-sans);
    margin: 0 auto;
    max-width: var(--content-width);
@@ -212,8 +216,18 @@
    word-break: break-word;
    overflow-wrap: break-word;
    text-rendering: optimizeLegibility;
-   font-kerning: normal -webkit-tap-highlight-color: transparent;
-   -webkit-text-size-adjust: 100%
+   font-kerning: normal ;
+   -webkit-tap-highlight-color: transparent;
+   text-rendering: optimizeLegibility;   
+   -webkit-font-smoothing: antialiased;
+   -webkit-text-size-adjust: 100%;
+   -webkit-text-size-adjust: none;
+   font-kerning: normal;
+   -webkit-font-feature-settings: kern 1, liga 1, calt 1;
+   -moz-font-feature-settings: kern=1, liga=1, calt=1;
+   -moz-font-feature-settings: kern 1, liga 1, calt 1;
+   font-feature-settings: kern 1, liga 1, calt 1
+
  }
  body>* {
    grid-column: 2
@@ -233,8 +247,12 @@
    color: inherit;
    max-width: 100%;
    width: 64px;
-   height: auto
+   height: auto;
+   transition: all .1s ease-in;
  }
+ svg[class=svg-logo]:hover {
+  transform: rotate(-7deg)
+}
  svg path.square {
    fill: var(--svg-background)
  }
@@ -246,12 +264,14 @@
   transition: color .1s ease;
   color: inherit;
   max-width: 100%;
-  width: 27%;
-  height: auto
+  width: 17rem;
+  height: auto;
+  overflow: visible;
 }
  svg path.logotype {
    fill: var(--svg-logotype-color)
  }
+
  main {
    padding-top: 1.5rem;
    animation: load_animation ease .7s;
@@ -843,14 +863,18 @@ input, select, textarea {
  input[type=radio][name=color-scheme]+label {
   height: 1.875rem;
   width: 1.875rem;
-  border-radius: .25rem;
-   background: var(--background-theme-color);
-   color: var(--theme-color);
-   transition: background-color 0.2s ease;
+  border-radius: .5rem;
+  background: var(--background-theme-color);
+  color: var(--theme-color);
+  transition: background-color 0.2s ease;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
  }
  input[type=radio][name=color-scheme]:hover+label {
    background: var(--hover-background-theme-color);
    color: var(--theme-color);
+   filter: invert(0.1)
  }
  input[type=radio][name=color-scheme]:focus+label {
    background: var(--focus-background-theme-color);

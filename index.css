@@ -24,9 +24,9 @@
    --font-serif: "Alice", serif;
    --font-overpass: "Overpass", sans-serif;
    --font-mono: "JetBrains Mono", monospace;
-   --font-size: 16px;
-   --font-s: 14px;
-   --font-size-serif: 18px;
+   --font-size: 1rem;
+   --font-s: 0.875rem;
+   --font-size-serif: 1.125rem;
    --content-width: 100ch;
    --spacing: 1.5em;
    --spacing-s: calc(0.5 * var(--spacing));
@@ -51,11 +51,13 @@
    --blockquote-background: light-dark(var(--color-onyx), var(--color-bright-grey));
    --pre-background: light-dark(var(--color-onyx), var(--color-bright-grey));
    --line: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
+   --line-b: light-dark(var(--color-onyx), var(--color-sea-nymph));
    --heading: light-dark(var(--color-onyx), var(--color-bright-grey));
    --link: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
    --link-visited: light-dark(var(--color-powder-ash), var(--color-powder-ash));
    --link-hover: light-dark(var(--color-powder-ash), var(--color-powder-ash));
    --body: light-dark(var(--color-onyx), var(--color-bright-grey));
+   --text-grey: light-dark(var(--color-onyx), var(--color-onyx));
    --pre-body: light-dark(var(--color-bright-grey), var(--color-onyx));
    --selection-color: light-dark(var(--color-onyx), var(--color-onyx));
    --selection-background: light-dark(var(--color-powder-ash), var(--color-powder-ash));
@@ -63,6 +65,9 @@
    --background-theme-color: light-dark(var(--color-onyx), var(--color-bright-grey));
    --hover-background-theme-color: light-dark(var(--color-powder-ash), var(--color-powder-ash));
    --focus-background-theme-color: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
+   --input-background-color: light-dark(var(--color-powder-ash), var(--color-powder-ash));
+   --button-background-color: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
+   --input-disable-background-color: light-dark(var(--color-powder-ash), var(--color-powder-ash));
  }
  :root {
    &:has(input[name="color-scheme"][value="light dark"]:checked) {
@@ -138,9 +143,12 @@
    display: block;
    max-width: 100%
  }
- button, input, select, textarea {
+ button {
    font: inherit
  }
+ input, select, textarea {
+  font: inherit
+}
  h1, h2, h3, h4, h5, h6, p {
    overflow-wrap: break-word
  }
@@ -224,9 +232,6 @@
    max-width: 100%;
    width: var(--logo-width-tiny);
    height: auto
- }
- svg[class=logo-logotype]:hover {
-   transform: scale(1.05)
  }
  svg path.square {
    fill: var(--svg-background)
@@ -342,7 +347,7 @@
    transition: filter .3s ease;
    filter: brightness(1.2)
  }
- .button, ::file-selector-button, a[rel=next], a[rel=prev] {
+::file-selector-button, a[rel=next], a[rel=prev] {
    display: inline-block;
    line-height: 1.73;
    border: none;
@@ -698,8 +703,9 @@
  form {
    font-family: var(--font-overpass)
  }
-button, input, select, textarea {
-   font-family: var(--font-overpass);
+input, select, textarea {
+   font-family: var(--font-mono);
+   font-size: var(--font-s);
    display: inline-block;
    vertical-align: middle;
    width: 170px;
@@ -713,24 +719,26 @@ button, input, select, textarea {
    box-sizing: border-box;
    outline: 0;
    outline-offset: -2px;
-   background-color: var(--body);
-   color: var(--background);
+   background-color: var(--input-background-color);
+   box-shadow: inset 0 1px 0 rgba(0, 0, 0, .15);
+   color: var(--text-grey);
    border-color: var(--line)
- }
+ } 
+
  option, select {
-   background-color: var(--body);
-   color: var(--background)
+   background-color: var(--input-background-color);
+   color: var(--text-grey)
  }
  button, input[type=button], input[type=reset], input[type=submit] {
    width: auto;
-   background-color: var(--body);
-   color: var(--background);
+   background-color: var(--button-background-color);
+   color: var(--color-onyx);
    padding-right: 8px;
    padding-left: 8px;
    font-weight: 700;
    cursor: pointer;
    border-color: transparent;
-   box-shadow: 0 0 6px -3px #000;
+   box-shadow: 0 0 6px -3px var(--color-onyx);
    border-radius: 3px
  }
  input[type=checkbox], input[type=image], input[type=radio] {
@@ -739,7 +747,7 @@ button, input, select, textarea {
    background: 0 0;
    border: none;
    cursor: pointer;
-   background-color: var(--body)
+   background-color: var(--input-background-color)
  }
  input[type=checkbox], input[type=radio] {
    position: relative;
@@ -763,16 +771,16 @@ button, input, select, textarea {
    outline: 0
  }
  input:focus, select:focus, textarea:focus {
-   background-color: var(--body)
+   background-color: var(--input-background-color);
  }
  button:focus, input[type=button]:focus, input[type=reset]:focus, input[type=submit]:focus {
-   background-color: var(--body)
+   background-color: var(--input-background-color);
  }
  button:hover, input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {
    filter: brightness(.9)
  }
  button:active, input[type=button]:active, input[type=reset]:active, input[type=submit]:active {
-   background-color: var(--body)
+   background-color: var(--input-background-color);
  }
  fieldset {
    margin: 0 0 1em;
@@ -793,7 +801,7 @@ button, input, select, textarea {
    cursor: not-allowed
  }
  input[type=date][readonly], input[type=date][readonly]:focus, input[type=email][readonly], input[type=email][readonly]:focus, input[type=number][readonly], input[type=number][readonly]:focus, input[type=tel][readonly], input[type=tel][readonly]:focus, input[type=text][readonly], input[type=text][readonly]:focus, input[type=url][readonly], input[type=url][readonly]:focus, textarea[readonly], textarea[readonly]:focus {
-   background-color: var(--body);
+   background-color: var(--input-disable-background-color);
    cursor: default
  }
  

@@ -7,77 +7,80 @@
  */
  @charset "UTF-8";
  @import url(https://fonts.googleapis.com/css2?family=Alice&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap);
-
-:root {
-  color-scheme: light dark;
-  --color-bright-grey: #E9EAEB;
-  --color-bright-grey-rgb: rgb(233, 234, 235);
-  --color-powder-ash: #B5C9BD;
-  --color-powder-ash-rgb: rgb(181, 201, 189);
-  --color-onyx: #2C302F;
-  --color-onyx-rgb: rgb(44, 48, 47);
-  --color-sea-nymph: #74A69A;
-  --color-sea-nymph-rgb: rgb(116, 166, 154);
-  --font-sans: "Lora", sans-serif;
-  --font-serif: "Alice", serif;
-  --font-overpass: "Overpass", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-  --font-size: 16px;
-  --font-s: 14px;
-  --font-size-serif: 18px;
-  --content-width: 100ch;
-  --spacing: 1.5em;
-  --spacing-s: calc(0.5 * var(--spacing));
-  --spacing-m: var(--spacing);
-  --spacing-l: calc(1.5 * var(--spacing));
-  --spacing-xl: calc(2.5 * var(--spacing));
-  --spacing-xxl: calc(5 * var(--spacing));
-  --spacing-col: calc(6 * var(--spacing));
-  --spacing-width-max: 38rem;
-  --spacing-width-tiny: 15rem;
-  --spacing-width-xl: 50rem;
-  --logo-width-max: 38rem;
-  --logo-width-tiny: 15rem;
-  --logo-width-xl: 50rem;
-  --headline: var(--color-sea-nymph);
-  --border-color: var(--color-sea-nymph);
-  --svg-background: light-dark(var(--color-onyx), var(--color-powder-ash));
-  --svg-logo-color: light-dark(var(--color-powder-ash), var(--color-onyx));
-  --svg-logotype-color: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
-  --background: light-dark(var(--color-bright-grey), var(--color-onyx));
-  --blockquote: light-dark(var(--color-bright-grey), var(--color-onyx));
-  --blockquote-background: light-dark(var(--color-onyx), var(--color-bright-grey));
-  --pre-background: light-dark(var(--color-onyx), var(--color-bright-grey));
-  --line: light-dark(var(--color-onyx), var(--color-bright-grey));
-  --heading: light-dark(var(--color-onyx), var(--color-bright-grey));
-  --link: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
-  --link-visited: light-dark(var(--color-powder-ash), var(--color-powder-ash));
-  --link-hover: light-dark(var(--color-powder-ash), var(--color-powder-ash));
-  --body: light-dark(var(--color-onyx), var(--color-bright-grey));
-  --pre-body: light-dark(var(--color-bright-grey), var(--color-onyx));
-  --selection-color: light-dark(var(--color-onyx), var(--color-onyx));
-  --selection-background: light-dark(var(--color-powder-ash), var(--color-powder-ash));
-}
-
+ 
  :root {
-  &:has(input[name="color-scheme"][value="light dark"]:checked) {
-    color-scheme: light dark;
-  }
-  &:has(input[name="color-scheme"][value="light"]:checked) {
-    color-scheme: light;
-  }
-  &:has(input[name="color-scheme"][value="dark"]:checked) {
-    color-scheme: dark;
-  }
-}
-
-
- @media (prefers-color-scheme:dark) {
-  img, video {
-   opacity: .8
+   color-scheme: light dark;
+   --color-bright-grey: #E9EAEB;
+   --color-bright-grey-rgb: rgb(233, 234, 235);
+   --color-powder-ash: #B5C9BD;
+   --color-powder-ash-rgb: rgb(181, 201, 189);
+   --color-onyx: #2C302F;
+   --color-onyx-rgb: rgb(44, 48, 47);
+   --color-sea-nymph: #74A69A;
+   --color-sea-nymph-rgb: rgb(116, 166, 154);
+   --font-sans: "Lora", sans-serif;
+   --font-serif: "Alice", serif;
+   --font-overpass: "Overpass", sans-serif;
+   --font-mono: "JetBrains Mono", monospace;
+   --font-size: 16px;
+   --font-s: 14px;
+   --font-size-serif: 18px;
+   --content-width: 100ch;
+   --spacing: 1.5em;
+   --spacing-s: calc(0.5 * var(--spacing));
+   --spacing-m: var(--spacing);
+   --spacing-l: calc(1.5 * var(--spacing));
+   --spacing-xl: calc(2.5 * var(--spacing));
+   --spacing-xxl: calc(5 * var(--spacing));
+   --spacing-col: calc(6 * var(--spacing));
+   --spacing-width-max: 38rem;
+   --spacing-width-tiny: 15rem;
+   --spacing-width-xl: 50rem;
+   --logo-width-max: 38rem;
+   --logo-width-tiny: 15rem;
+   --logo-width-xl: 50rem;
+   --headline: var(--color-sea-nymph);
+   --border-color: var(--color-sea-nymph);
+   --svg-background: light-dark(var(--color-onyx), var(--color-powder-ash));
+   --svg-logo-color: light-dark(var(--color-powder-ash), var(--color-onyx));
+   --svg-logotype-color: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
+   --background: light-dark(var(--color-bright-grey), var(--color-onyx));
+   --blockquote: light-dark(var(--color-bright-grey), var(--color-onyx));
+   --blockquote-background: light-dark(var(--color-onyx), var(--color-bright-grey));
+   --pre-background: light-dark(var(--color-onyx), var(--color-bright-grey));
+   --line: light-dark(var(--color-onyx), var(--color-bright-grey));
+   --heading: light-dark(var(--color-onyx), var(--color-bright-grey));
+   --link: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
+   --link-visited: light-dark(var(--color-powder-ash), var(--color-powder-ash));
+   --link-hover: light-dark(var(--color-powder-ash), var(--color-powder-ash));
+   --body: light-dark(var(--color-onyx), var(--color-bright-grey));
+   --pre-body: light-dark(var(--color-bright-grey), var(--color-onyx));
+   --selection-color: light-dark(var(--color-onyx), var(--color-onyx));
+   --selection-background: light-dark(var(--color-powder-ash), var(--color-powder-ash));
+   --theme-color: light-dark(var(--color-bright-grey), var(--color-onyx));
+   --background-theme-color: light-dark(var(--color-onyx), var(--color-bright-grey));
+   --hover-background-theme-color: light-dark(var(--color-powder-ash), var(--color-powder-ash));
+   --focus-background-theme-color: light-dark(var(--color-sea-nymph), var(--color-sea-nymph));
  }
-}
-
+ :root {
+   &:has(input[name="color-scheme"][value="light dark"]:checked) {
+     color-scheme: light dark;
+   }
+   &:has(input[name="color-scheme"][value="light"]:checked) {
+     color-scheme: light;
+   }
+   &:has(input[name="color-scheme"][value="dark"]:checked) {
+     color-scheme: dark;
+   }
+ }
+ 
+ 
+ @media (prefers-color-scheme:dark) {
+   img, video {
+     opacity: .8
+   }
+ }
+ 
  @media(min-width: 50em) {
    :root {
      --flow: 1em
@@ -95,7 +98,7 @@
    }
  }
  
-
+ 
  
  @media (prefers-reduced-motion:reduce) {
    html:focus-within {
@@ -791,6 +794,51 @@
    background-color: var(--body);
    cursor: default
  }
+ 
+ input[type=radio][name=color-scheme] {
+   visibility: hidden;
+   position: absolute;
+   clip: rect(1px 1px 1px 1px);
+   clip: rect(1px, 1px, 1px, 1px);
+   padding: 0;
+   border: 0;
+   height: 1px;
+   width: 1px;
+   overflow: hidden;
+   margin: -1px;
+   padding: 0;
+   clip-path: inset(100%);
+   white-space: nowrap;
+   border-width: 0
+ }
+ 
+ input[type=radio][name=color-scheme]+label {
+   background: var(--background-theme-color);
+   color: var(--theme-color);
+ }
+ input[type=radio][name=color-scheme]:hover+label {
+   background: var(--hover-background-theme-color);
+   color: var(--theme-color);
+ }
+ input[type=radio][name=color-scheme]:focus+label {
+   background: var(--focus-background-theme-color);
+   color: var(--theme-color);
+ }
+ 
+ input[type=radio][name=color-scheme]:checked:hover+label {
+   background: var(--hover-background-theme-color);
+   color: var(--theme-color);
+ }
+ input[type=radio][name=color-scheme]:checked:focus+label {
+   background: var(--focus-background-theme-color);
+   color: var(--theme-color);
+ }
+ input[type=radio][name=color-scheme]:checked+label {
+   background: var(--focus-background-theme-color);
+   color: var(--theme-color);
+ }
+ 
+ 
  ::-webkit-input-placeholder {
    color: var(--background)
  }
@@ -821,6 +869,8 @@
  :focus:placeholder {
    color: var(--nord7)
  }
+ 
+ 
  .color-white {
    color: #fff;
    background-color: #fff;
@@ -912,40 +962,3 @@
    color: var(--secondary-text);
    font-size: .75rem
  }
-
-input[type=radio][name=color-scheme] {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  white-space: nowrap;
-  width: 1px;
-}
-
-input[type=radio][name=color-scheme] + label {
-  background: #444444;
-  color: #ccc;
-}
-input[type=radio][name=color-scheme]:hover + label {
-  background: #666;
-  color: #000;
-}
-input[type=radio][name=color-scheme]:focus + label {
-  background: #666;
-  color: #000;
-}
-
-input[type=radio][name=color-scheme]:checked:hover + label {
-  background: #fff;
-  color: #000;
-}
-input[type=radio][name=color-scheme]:checked:focus + label {
-  background: #fff;
-  color: #000;
-}
-input[type=radio][name=color-scheme]:checked + label {
-  background: #9AD284;
-  color: #000;
-}

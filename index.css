@@ -687,7 +687,7 @@ samp {
  }
  mark {
    padding: 3px 6px;
-   background: var(--blockquote-background);
+   background: var(--color-dandelion);
    color: var(--blockquote)
  }
  cite {
@@ -855,7 +855,7 @@ input, select, textarea {
    padding: 0;
    clip-path: inset(100%);
    white-space: nowrap;
-   border-width: 0
+   border-width: 0;
  }
  label>svg {
   margin: 0.188rem auto;
@@ -1041,7 +1041,7 @@ input, select, textarea {
   transform: translateY(-50%);
  }*/
 
- .copyright p mark {
+ .not-by-ai p mark {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -1050,11 +1050,12 @@ input, select, textarea {
   margin-top: 0;
   margin-top: 2px;
   margin-right: -12px;
+  margin-bottom: 2px;
   padding: 2px 8px;
   border-radius: 4px;
   background-color: var(--color-dandelion);
   color: var(--color-onyx);
-  font-size: 11px;
+  font-size: 0.688rem;
   font-family: var(--font-mono);
   text-transform: uppercase;
   -webkit-clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%);

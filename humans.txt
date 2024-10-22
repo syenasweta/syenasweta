@@ -1,0 +1,17 @@
+/* TEAM */
+
+	Main Idea, Founder, Author: Nashrullah Ali Fauzi a.k.a Syenasweta
+	Instagram: @syenasweta
+	From: Kudus, Indonesia
+
+/* SITE */
+
+	Last update: 2024/10/23
+	Language: Indonesia
+	Doctype: HTML5
+	Components: Github, etc.
+
+/* THANKS */
+
+	Idea: All
+		

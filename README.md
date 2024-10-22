@@ -46,3 +46,8 @@
 - https://jsfiddle.net/tovic/eU5PN/embedded/result,html,css
 - https://jamesg.blog/
 - https://remixicon.com/
+- https://www.codista.com/de/impressum/
+- https://dohliam.github.io/dropin-minimal-css/
+- https://mxb.dev/blogroll/
+- https://adactio.com/links/search/?query=Css+gird
+- https://mxb.dev/blogroll/

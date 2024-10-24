@@ -886,12 +886,12 @@
         <form name="color-scheme" method="get" action="" id="color-scheme">
           <fieldset class="no-user-select" role=“group” aria-labelledby=“ColorScheme”>
             <legend>Choose a theme …</legend>
-          <input onchange="this.form.submit()" id="light-dark" data-toggle-value="light-dark" name="skin" required type="radio" value="light dark">
+          <input id="light-dark" data-toggle-value="light-dark" name="skin" required type="radio" value="light dark">
           <label for="light-dark" title="System default">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"></path><path d="M17.5 2.47363L23 11.9999L17.5 21.5262H6.5L1 11.9999L6.5 2.47363H17.5ZM16.3453 4.47363H7.6547L3.3094 11.9999L7.6547 19.5262H16.3453L20.6906 11.9999L16.3453 4.47363ZM8.63398 8.16979L10.366 7.16979L15.366 15.83L13.634 16.83L8.63398 8.16979Z"></path></svg>
             <span class="sr-only" hidden>System default</span>
           </label>
-          <input onchange="this.form.submit()" id="light" data-toggle-value="light" name="skin" required type="radio" value="light">
+          <input id="light" data-toggle-value="light" name="skin" required type="radio" value="light">
           <label for="light" title="Light">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
               <path fill="none" d="M0 0h24v24H0z"></path>
@@ -899,7 +899,7 @@
             </svg>
             <span class="sr-only" hidden>Light</span>
           </label>
-          <input onchange="this.form.submit()" id="dark" data-toggle-value="dark" name="skin" required type="radio" value="dark">
+          <input id="dark" data-toggle-value="dark" name="skin" required type="radio" value="dark" checked>
           <label for="dark" title="Dark">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
               <path fill="none" d="M0 0h24v24H0z"></path>

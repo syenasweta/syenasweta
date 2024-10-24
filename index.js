@@ -1,3 +1,4 @@
+var submitskin = document.getElementById('submitskin');
 var light_dark = document.getElementById('light-dark');
 var light = document.getElementById('light');
 var dark = document.getElementById('dark');

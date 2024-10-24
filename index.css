@@ -372,8 +372,10 @@ aside {
    touch-action: manipulation
  }
  a, a * {
-   text-decoration: underline;
-   color: var(--link)
+   color: var(--link);
+ }
+ article a {
+  background-image: linear-gradient(to top, var(--color-sea-nymph) 0, var(--color-sea-nymph) .1316872428rem, rgba(255, 151, 77, 0) .1316872428rem, rgba(255, 151, 77, 0) 100%);
  }
  a:link {
    color: var(--link)
@@ -496,6 +498,8 @@ aside {
  }
  header nav {
    font-family: var(--font-overpass);
+   text-transform: capitalize;
+   letter-spacing: .035em;
    background-color: var(--background);
    color: var(--link);
    font-weight: 700;

@@ -72,13 +72,13 @@
    --input-disable-background-color: light-dark(var(--color-powder-ash), var(--color-powder-ash));
  }
  :root {
-   &:has(input[name="color-scheme"][value="light dark"]:checked) {
+   &:has(input[name="skin"][value="light dark"]:checked) {
      color-scheme: light dark;
    }
-   &:has(input[name="color-scheme"][value="light"]:checked) {
+   &:has(input[name="skin"][value="light"]:checked) {
      color-scheme: light;
    }
-   &:has(input[name="color-scheme"][value="dark"]:checked) {
+   &:has(input[name="skin"][value="dark"]:checked) {
      color-scheme: dark;
    }
  }
@@ -281,10 +281,10 @@
 
 aside {
   font-family: var(--font-overpass);
-  display: grid;
+  /*display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 1rem;
+  gap: 1rem;*/
 }
 
  h1, h2, h3, h4, h5, h6 {
@@ -850,7 +850,7 @@ input, select, textarea {
    cursor: default
  }
  
- input[type=radio][name=color-scheme] {
+ input[type=radio][name=skin] {
    visibility: hidden;
    position: absolute;
    clip: rect(1px 1px 1px 1px);
@@ -869,7 +869,7 @@ input, select, textarea {
  label>svg {
   margin: 0.188rem auto;
  }
- input[type=radio][name=color-scheme]+label {
+ input[type=radio][name=skin]+label {
   height: 1.875rem;
   width: 1.875rem;
   border-radius: .5rem;
@@ -880,29 +880,43 @@ input, select, textarea {
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-duration: .15s;
  }
- input[type=radio][name=color-scheme]:hover+label {
+ input[type=radio][name=skin]:hover+label {
    background: var(--hover-background-theme-color);
    color: var(--theme-color);
    filter: invert(0.1)
  }
- input[type=radio][name=color-scheme]:focus+label {
+ input[type=radio][name=skin]:focus+label {
    background: var(--focus-background-theme-color);
    color: var(--theme-color);
  }
  
- input[type=radio][name=color-scheme]:checked:hover+label {
+ input[type=radio][name=skin]:checked:hover+label {
    background: var(--hover-background-theme-color);
    color: var(--theme-color);
  }
- input[type=radio][name=color-scheme]:checked:focus+label {
+ input[type=radio][name=skin]:checked:focus+label {
    background: var(--focus-background-theme-color);
    color: var(--theme-color);
  }
- input[type=radio][name=color-scheme]:checked+label {
+ input[type=radio][name=skin]:checked+label {
    background: var(--focus-background-theme-color);
    color: var(--theme-color);
  }
- 
+
+ [data-toggle-group=light-dark],
+ [data-toggle-group=light],
+ [data-toggle-group=dark] {
+  display: none;
+ }
+
+ [data-toggle-value=light-dark]:checked+label ~  [data-toggle-group=light-dark],
+ [data-toggle-value=light]:checked+label ~  [data-toggle-group=light],
+ [data-toggle-value=dark]:checked+label ~  [data-toggle-group=dark] {
+  display: block;
+  font-size: var(--font-s);
+  font-family: var(--font-mono);
+  margin: 1rem 1rem 0 0;
+ }
  
  ::-webkit-input-placeholder {
    color: var(--background)

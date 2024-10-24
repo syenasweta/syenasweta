@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-ie">
   
 
 <head>
@@ -49,14 +49,15 @@
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="index.css?v=ssssfsfsdfdgfd" title="system">
-  <link rel="stylesheet" href="toc.css?v=sdsfsssegdfgfefs">
-  <link rel="stylesheet" href="print.css?v=fdferqfgfssfe" media="print" title="print">
+  <link rel="stylesheet" href="index.css?v=dggdt4" title="system">
+  <link rel="stylesheet" href="toc.css?v=dgdgf34s">
+  <link rel="stylesheet" href="print.css?v=fdgfg455sfe" media="print" title="print">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/panda-syntax-dark.css">
+  <script src="q2o.js"></script>
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <hgroup>
       <h1 class="no-user-select">
         <a href="#" title="Syenasweta">
@@ -94,7 +95,7 @@
         <span class="sr-only" hidden>A Website by Nashrullah Ali Fauzi</span>
       </h2>
     </hgroup>
-    <nav class="no-user-select">
+    <nav class="no-user-select" role="navigation">
       <ul>
         <li><a href="#">Journals</a></li>
         <li><a href="#">Articles</a></li>
@@ -112,8 +113,8 @@
     </nav>
   </header>
 
-  <main>
-    <article>
+  <main role="main">
+    <article class="h-entry">
       <header>
         <h1 id="to:about">About this Site</h1>
       </header>
@@ -855,25 +856,25 @@
     
       </section>
   </main>
-  <aside>
+  <aside role="complementary">
 
     <section class="first-aside">
       <header>
         <h4>Links</h4>
       </header>
-      <ol>
+      <ul>
         <li><a href="#">Styleguide</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">Colophon</a></li>
         <li><a href="#">Imprint</a></li>
         <li><a href="#">Dashboard</a></li>
         <li><a href="#">Legal/Impressum</a></li>
-      </ol>
+      </ul>
     </section>
 
-    <section class="second-aside">
+    <section class="second-aside" role="search">
       <header>
-        <h4>Links</h4>
+        <h4>Search</h4>
       </header>
     </section>
 
@@ -882,36 +883,40 @@
         <h4>Customise</h4>
       </header>
 
-        <form name="color-scheme" method="get" action="#" id="color-scheme">
+        <form name="color-scheme" method="get" action="" id="color-scheme">
           <fieldset class="no-user-select" role=“group” aria-labelledby=“ColorScheme”>
             <legend>Choose a theme …</legend>
-          <input id="color-scheme-light-dark" name="color-scheme" required type="radio" value="light dark">
-          <label for="color-scheme-light-dark" title="System default">
+          <input id="light-dark" data-toggle-value="light-dark" name="skin" required type="radio" value="light dark">
+          <label for="light-dark" title="System default">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"></path><path d="M17.5 2.47363L23 11.9999L17.5 21.5262H6.5L1 11.9999L6.5 2.47363H17.5ZM16.3453 4.47363H7.6547L3.3094 11.9999L7.6547 19.5262H16.3453L20.6906 11.9999L16.3453 4.47363ZM8.63398 8.16979L10.366 7.16979L15.366 15.83L13.634 16.83L8.63398 8.16979Z"></path></svg>
             <span class="sr-only" hidden>System default</span>
           </label>
-          <input id="color-scheme-light" name="color-scheme" required type="radio" value="light">
-          <label for="color-scheme-light" title="Light">
+          <input id="light" data-toggle-value="light" name="skin" required type="radio" value="light">
+          <label for="light" title="Light">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
               <path fill="none" d="M0 0h24v24H0z"></path>
               <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path>
             </svg>
             <span class="sr-only" hidden>Light</span>
           </label>
-          <input id="color-scheme-dark" name="color-scheme" required type="radio" value="dark" checked>
-          <label for="color-scheme-dark" title="Dark">
+          <input id="dark" data-toggle-value="dark" name="skin" required type="radio" value="dark">
+          <label for="dark" title="Dark">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
               <path fill="none" d="M0 0h24v24H0z"></path>
               <path d="M12 21.9967C6.47715 21.9967 2 17.5196 2 11.9967C2 6.47386 6.47715 1.9967 12 1.9967C17.5228 1.9967 22 6.47386 22 11.9967C22 17.5196 17.5228 21.9967 12 21.9967ZM12 19.9967C16.4183 19.9967 20 16.415 20 11.9967C20 7.57843 16.4183 3.9967 12 3.9967C7.58172 3.9967 4 7.57843 4 11.9967C4 16.415 7.58172 19.9967 12 19.9967ZM7.00035 15.316C9.07995 15.1646 11.117 14.2939 12.7071 12.7038C14.2972 11.1137 15.1679 9.07666 15.3193 6.99706C15.6454 7.21408 15.955 7.46642 16.2426 7.75406C18.5858 10.0972 18.5858 13.8962 16.2426 16.2393C13.8995 18.5825 10.1005 18.5825 7.75736 16.2393C7.46971 15.9517 7.21738 15.6421 7.00035 15.316Z"></path>
             </svg>
-            <span class="sr-only">Dark</span></label>
-          </fieldset>
-        </form>
+            <span class="sr-only">Dark</span>
+          </label>
+            <p data-toggle-group="light-dark">System default</p>
+            <p data-toggle-group="light">Light</p>
+            <p data-toggle-group="dark">Dark</p>
+        </fieldset>
+      </form>
 
     </section>
 
   </aside>
-  <footer>
+  <footer role="contentinfo">
     <nav class="no-user-select">
       <ul>
         <li>
@@ -1034,6 +1039,25 @@
       <p>Copyright © 2024-present Nashrullah Ali Fauzi. All Rights Reserved.</p>
     </div>
   </footer>
+
+<script>
+  var light_dark = document.getElementById('light-dark');
+  var light = document.getElementById('light');
+  var dark = document.getElementById('dark');
+  var url = q2o(window.location.search);
+  if (window.location.search) {
+    var skin = url.skin;
+    if (skin == "light dark") {
+      light_dark.checked = true;
+    } else if (skin == "light") {
+      light.checked = true;
+    } else if (skin == "dark") {
+      dark.checked = true;
+    } else {
+      light_dark.checked = true;
+    }
+  }
+</script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script>

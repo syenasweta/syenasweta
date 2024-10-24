@@ -127,7 +127,7 @@
    padding: 0;
    box-sizing: border-box;
    font-feature-settings: "kern"1, "liga"1 text-rendering: geometricPrecision;
-   text-decoration: none;
+   text-decoration: inherit;
    text-transform: none;
    font-weight: 400;
    font-style: normal;
@@ -290,7 +290,7 @@ aside {
  h1, h2, h3, h4, h5, h6 {
    line-height: 1;
    color: var(--heading);
-   padding-top: .875rem
+   padding-top: .875rem;
  }
  h1, h2, h3 {
    color: var(--heading);
@@ -491,14 +491,14 @@ aside {
  }
  header>:first-child {
    margin-top: 0;
-   padding-top: 0
+   padding-top: 0;
  }
  header>:last-child {
    margin-bottom: 0
  }
  header nav {
    font-family: var(--font-overpass);
-   text-transform: capitalize;
+   text-transform: uppercase;
    letter-spacing: .035em;
    background-color: var(--background);
    color: var(--link);

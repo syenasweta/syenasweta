@@ -27,7 +27,7 @@
   if (win.localStorage) {
     const radio = [doc.getElementById('light-dark'), doc.getElementById('light'), doc.getElementById('dark')]
     const skin = win.localStorage.getItem('skin');
-    const skins = ["light+dark", "light", "dark"];
+    const skins = ["light dark", "light", "dark"];
     if (radio) {
       if (skin == skins[0]) {
         radio[0].checked = true;

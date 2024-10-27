@@ -1,7 +1,7 @@
 (function(win, doc) {
   'use strict';
   const form = doc.forms['skinselection'];
-  const inputs = document.querySelectorAll('input[name="skin"]');
+  const inputs = document.querySelectorAll('input[type=radio][name="skin"]');
   const submit = doc.getElementById('skinsubmit');
   if (submit) {
     if (inputs) {

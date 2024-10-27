@@ -42,5 +42,4 @@
   } else {
     console.log()
   };
-  hljs.highlightAll();
 }(this, this.document));

@@ -280,9 +280,9 @@
  aside {
      font-family: var(--font-overpass);
      /*display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows: 1fr;
-     gap: 1rem;*/
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 1rem;*/
  }
  
  h1, h2, h3, h4, h5, h6 {
@@ -1064,19 +1064,19 @@
      font-size: .75rem
  }
  /* .copyright p mark {
-     font-family: var(--font-mono);
-     padding: 0.188rem 0.438rem;
-     background: var(--color-dandelion);
-     color: var(--color-onyx);
-     border-radius: 0.188rem 0.438rem 0.188rem;
-     margin: 0 auto;
-     flex-direction: row;
-     overflow-wrap: break-word;
-     overflow-x: auto;
-     white-space: nowrap;
-     text-overflow: ellipsis;
-     transform: translateY(-50%);
-    }*/
+      font-family: var(--font-mono);
+      padding: 0.188rem 0.438rem;
+      background: var(--color-dandelion);
+      color: var(--color-onyx);
+      border-radius: 0.188rem 0.438rem 0.188rem;
+      margin: 0 auto;
+      flex-direction: row;
+      overflow-wrap: break-word;
+      overflow-x: auto;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transform: translateY(-50%);
+     }*/
  
  .not-by-ai p mark {
      display: flex;

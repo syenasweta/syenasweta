@@ -372,6 +372,7 @@
  .description, .lead, article>p:first-of-type {
      font-size: 1.25em;
      font-family: var(--font-overpass);
+     text-align: center;
  }
  h1 a, h1 a *, h2 a, h2 a *, h3 a, h3 a *, h4 a, h4 a *, h5 a *, h6 a * {
      text-decoration: none
